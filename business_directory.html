@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Directory - Zoleni</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bd_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="top_sidebar flex_align">
+                <a href="#">
+                    <img src="./images/zoleni_logo.png" alt="#" height="40px">
+                </a>
+                <i class="bi bi-x-lg"  id="close_menu"></i>
+            </div>
+            <ul class="middle_sidebar">
+                <li class="sidebar_item">
+                    <a href="./index.html" class="flex_align">
+                        <img src="./images/icons/Home.svg" alt="Home">
+                        Home
+                    </a>
+                </li>
+                <li class="sidebar_item">
+                    <a href="#" class="flex_align">
+                        <img src="./images/icons/Front_Desk.svg" alt="Home">
+                        Concierge
+                    </a>
+                </li>
+                <li class="sidebar_item">
+                    <div id="delivery" class="flex_align sidebar_d_items">
+                        <img src="./images/icons/Delivery.svg" alt="Home">
+                        Delivery
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <ul id="delivery_list">
+                        <li><a href="#">Now</a></li>
+                        <li><a href="#">Schedule</a></li>
+                        <li><a href="#">Ongoing</a></li>
+                        <li><a href="#">Same Day</a></li>
+                        <li><a href="#">Multi Order - Same Pickup</a></li>
+                        <li><a href="#">Multi Order - Same Dropoff</a></li>
+                        <li><a href="">Interactive Delivery</a></li>
+                    </ul>
+                </li>            
+                <li class="sidebar_item">
+                    <div id="moving" class="flex_align sidebar_d_items">
+                        <img src="./images/icons/Heavy.svg" alt="Home">
+                        Moving
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <ul id="moving_list">
+                        <li><a href="#">Booking Now</a></li>
+                        <li><a href="#">Business Directory</a></li> 
+                    </ul>
+                </li>
+                <li class="sidebar_item">
+                    <div id="storage" class="flex_align sidebar_d_items">
+                        <img src="./images/icons/Storage.svg" alt="Home">
+                        Storage
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <ul id="storage_list">
+                        <li><a href="#">Booking Now</a></li>
+                        <li><a href="#">Business Directory</a></li> 
+                    </ul>
+                </li>
+                <li class="sidebar_item">
+                    <div id="ship" class="flex_align sidebar_d_items">
+                        <img src="./images/icons/In_Transit.svg" alt="Home">
+                        Ship
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <ul id="ship_list">
+                        <li><a href="#" class="active">Business Directory</a></li> 
+                    </ul>
+                </li>
+                <li class="sidebar_item">
+                    <div id="gig" class="flex_align sidebar_d_items">
+                        <img src="./images/icons/Opened_Folder.svg" alt="Home">
+                        Gig Pro
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <ul id="gig_list">
+                        <li><a href="#">Business Directory</a></li> 
+                    </ul>
+                </li>
+                <li class="sidebar_item">
+                    <div id="quote" class="flex_align sidebar_d_items">
+                        <img src="./images/icons/Quote.svg" alt="Home">
+                        Quote Rate
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <ul id="quote_list">
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Interactive Delivery</a></li>
+                        <li><a href="#">Moving</a></li> 
+                        <li><a href="#">Storage</a></li> 
+                        <li><a href="#">Ship</a></li> 
+                    </ul>
+                </li>
+                <li class="sidebar_item">
+                    <div id="lead_net" class="flex_align sidebar_d_items">
+                        <img src="./images/icons/Network.png" alt="Home">
+                        Lead Network
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <ul id="lead_net_list">
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Interactive Delivery</a></li>
+                        <li><a href="#">Moving</a></li> 
+                        <li><a href="#">Storage</a></li> 
+                        <li><a href="#">Ship</a></li> 
+                    </ul>
+                </li>
+            </ul>
+            <div class="bottom_sidebar flex_align">
+                <button class="btn_sec">
+                    <i class="bi bi-question"></i>
+                    Help
+                </button>
+                <button class="btn_pri" id="sidebar_login_btn">
+                    Login
+                </button>
+            </div>
+        </div>
+    
+        <!-- Login Modal -->
+        <div id="login_model" class="login_box flex_align">        
+            <div id="close_l_model" class="flex_align">
+                <i class="bi bi-x-lg" ></i>
+            </div>
+            <form class="f_s_l">
+                <div class="text_c">
+                    <h2>Welcome Back</h2>
+                    <p>Lorem ipsum dolor sit amet elit. Sunt omnis fugiat velit libero?</p>
+                </div>
+                <div class="inputs">
+                    <input type="email" name="log_email" id="log_email" placeholder="Email Address"> 
+                    <input type="password" name="log_pass" id="log_pass" placeholder="Password">
+                </div>
+                <button class="btn_pri" type="submit">Login</button>
+            </form>
+            <h2>OR</h2>
+            <div class="other_op">
+                <h2>Sign Up With</h2>
+                <div class="logos flex_align">
+                    <a href="#">
+                        <img src="./images/icons/Google.svg" alt="google">
+                    </a>
+                    <a href="#">
+                        <img src="./images/icons/Facebook.svg" alt="google">
+                    </a>
+                    <a href="#">
+                        <img src="./images/icons/Apple Logo.svg" alt="google">
+                    </a>
+                    <a href="#">
+                        <img src="./images/icons/Amazon.svg" alt="google">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Top Navbar -->
+        <div class="container top_header">
+            <span class="th_item">
+                <i class="bi bi-telephone-fill"></i>
+                <a href="tel: +919749932205">+1 68475</a>
+            </span>
+            <span class="th_item">
+                <i class="bi bi-envelope-at-fill"></i>
+                <a href="mailto:demo@gmail.com">demo@gmail.com</a>            
+            </span>
+            <span class="social_links">
+                <a href="#">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-linkedin"></i>
+                </a>    
+            </span>
+        </div>
+    
+        <!-- Header -->
+        <header class="container header flex_align">
+            <div class="left_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" id="open_menu" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+                <a id="main_logo" href="#">
+                    <img src="./images/zoleni_logo.png" alt="zoleni.com">
+                </a>
+            </div>
+            <div class="right_header flex_align">
+                <button class="btn_sec">
+                    <i class="bi bi-question"></i>
+                    Help
+                </button>
+                <button class="btn_pri" id="login_btn">
+                    Login
+                </button>
+                <button class="btn_pri">
+                    07:15:59
+                </button>  
+            </div>
+        </header>
+
+
+        <!-- Business Dir -->
+        <section class="bd_main">
+            <div class="bd_main_left">
+                <div class="slug container">
+                    <a>Home</a>
+                    <span>></span>
+                    <a>Business Directory</a>
+                </div>
+                <h2 class="page_title container">Shipping Companies</h2>
+            </div>
+            <div class="bd_main_right">
+                <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=toronto&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe><a href="https://www.analarmclock.com/">online alarm clock</a><br><a href="https://online.stopwatch-timer.net/"></a><br><style>.mapouter{position: relative;text-align: right;height: 1200px;width: 800px;}</style><a href="https://www.mapembed.net">google maps html code</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 1200px;width: 800px;}</style></div></div>
+            </div>
+            <form class="input_section">
+                <div class="inputs">
+                    <input type="text" name="keywords" id="keywords" class="double_inp" placeholder="Enter Company name or Any keywords" >
+                    <select class="single_inp" name="category" id="category">
+                        <option selected value="c_1">Category 1</option>
+                        <option value="c_1">Category 2</option>
+                        <option value="c_1">Category 3</option>
+                    </select>
+                    <select class="single_inp" name="category" id="category">
+                        <option selected value="c_1">Category 1</option>
+                        <option value="c_1">Category 2</option>
+                        <option value="c_1">Category 3</option>
+                    </select>
+                    <select class="single_inp" name="category" id="category">
+                        <option selected value="c_1">Category 1</option>
+                        <option value="c_1">Category 2</option>
+                        <option value="c_1">Category 3</option>
+                    </select>
+                    <select class="single_inp" name="category" id="category">
+                        <option selected value="c_1">Category 1</option>
+                        <option value="c_1">Category 2</option>
+                        <option value="c_1">Category 3</option>
+                    </select>
+                    <select class="single_inp" name="category" id="category">
+                        <option selected value="c_1">Category 1</option>
+                        <option value="c_1">Category 2</option>
+                        <option value="c_1">Category 3</option>
+                    </select>
+                    <select class="single_inp" name="category" id="category">
+                        <option selected value="c_1">Category 1</option>
+                        <option value="c_1">Category 2</option>
+                        <option value="c_1">Category 3</option>
+                    </select>
+                </div>
+                <input class="bd_form_btn" type="submit" value="Find Companies"></input>
+            </form>
+        </section>
+
+
+
+
+        
+    <script src="./index.js"></script>
+</body>
+</html>

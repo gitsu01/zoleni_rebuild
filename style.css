@@ -113,6 +113,7 @@ body::-webkit-scrollbar-thumb{
 
 /* Main Header */
 .header {
+    background-color: #fff;
     justify-content: space-between;
     height: 80px;
     border-top: .5px solid var(--dark-primary-color);
@@ -429,7 +430,8 @@ footer li{
     z-index: 199;  
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.5ms login_anm;
+    transition: all 0.5ms ease-in-out;
+    box-shadow: var(--shadow-dark);
 }
 
 
