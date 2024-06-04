@@ -168,7 +168,7 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: right;
+    object-position: center;
 }
 
 h1{
@@ -536,6 +536,10 @@ footer li{
     /* Hero Section */
     h1{
         font-size: 32px;
+    }
+
+    .hero_img{
+        object-position: right;
     }
 
     .content_sec .hero_subtitle{
