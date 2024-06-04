@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Lilita+One&display=swap');
+
+:root {
+    --primary-color: #99BC85;
+    --light-primary-color: #D4E7C5;
+    --dark-primary-color: #222831;
+    --hover-color: #615EFC;
+    --shadow-thin: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    --shadow-dark:  rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--dark-primary-color);
+    box-sizing: border-box;font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    padding: 0 150px;
+    width: 100%;
+    max-width: 2200px;
+    margin: 0 auto;
+}
+
+.flex_align{
+    display: flex;
+    align-items: center;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 45px;
+    padding: 0 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn_pri{
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: var(--shadow-dark);
+}
+
+.btn_sec {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: var(--shadow-thin);
+    background: transparent;
+}
+
+.btn_sec i{
+    color: var(--primary-color);
+    font-size: 20px;
+    height: 20px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--hover-color);
+}
+
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+/* Top Header */
+
+.top_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    background-color: var(--light-primary-color);
+    /* font-size: 12px;      */
+}
+.top_header .social_links{
+    display: flex;
+    gap: 20px;
+}
+.social_links a i{
+    font-size: 20px;
+}
+.social_links a:hover i,
+.th_item:hover i{
+    color: var(--hover-color);
+}
+
+/* Main Header */
+.header {
+    justify-content: space-between;
+    height: 80px;
+    border-top: .5px solid var(--dark-primary-color);
+    border-bottom: .5px solid var(--dark-primary-color);
+}
+
+.left_header {
+    height: 40px !important;
+}
+
+.left_header #open_menu{
+    cursor: pointer; 
+    padding-bottom: 2px; 
+    margin-right: 5px; 
+}
+
+#main_logo img{
+    height: 40px;
+}
+
+.right_header{
+    gap: 16px;
+}
+
+/* Hero Section */
+.hero_swipwer{
+    width: 100%;
+    height: 568px;
+}
+.hero_swipwer .swiper-wrapper .hero_section{
+    width: 100%;
+    height: 100%;
+}
+
+.hero_section{
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    border-bottom: .5px solid var(--dark-primary-color);
+}
+
+.hero_content{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 150px;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0.5) 45%, rgba(255,255,255,0) 100%);
+}
+
+.hero_img{
+    width: 100%;
+}
+
+h1{
+    font-size: 48px;
+    font-family: "Lilita One", sans-serif;
+    text-transform: uppercase;
+}
+
+.content_sec .hero_subtitle{
+    font-size: 24px;
+    opacity: .8;
+}
+
+.hero_content button{
+    margin-top: 30px;
+    width: fit-content !important;
+}
+
+/* Our Service  */
+.our_service{
+    padding: 50px 0;
+}
+.section_title{
+    display: inline;
+    padding-left: 150px;
+    padding-right: 10px;
+    border-bottom: .5px solid var(--dark-primary-color); 
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.service_cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 44px;
+}
+
+.service_card{
+    overflow: hidden;
+    width: 100%;
+    max-width: 430px;
+    /* padding: 10px 10px 20px 10px; */
+    box-shadow: var(--shadow-dark);
+    border-radius: 6px;
+}
+
+.service_card img{
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card_content{
+    padding: 20px 15px 30px 15px;
+}
+
+.card_content div{
+    margin-bottom: 30px;
+}
+
+.card_content div .card_title{
+    font-size: 24px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.card_content div .card_subtitle{
+    font-size: 16px;
+    opacity: .8;
+}
+
+/* Footer */
+.footer{
+    margin-top: 100px;
+}
+.top_footer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.top_footer .foot_item h4{
+    font-size: 20px;
+    font-family: "Lilita One", sans-serif;
+}
+
+.com_desc{
+    width: 100%;
+    max-width: 430px;
+}
+
+.com_desc .download_btn{
+    margin-top: 20px;
+}
+
+.newslatter{
+    width: 100%;
+    max-width: 430px;
+}
+
+.top_footer .foot_item ul{
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.top_footer .foot_item ul li{
+    margin-bottom: 8px;
+}
+
+.newslatter_box{
+    margin-top: 20px;
+}
+.newslatter_box input{
+    outline: none;
+    border: none;
+    height: 45px;
+    padding-left: 10px;
+    width: 69%;
+    background-color: #FFF5E0;
+}
+
+.newslatter_box button{
+    width: 30% !important;
+}
+
+footer p,
+footer li{
+    opacity: 0.8;
+}
+
+.bottom_footer{
+    height: 45px;
+    justify-content: space-between;
+}
+
+.bottom_footer .payments{
+    gap: 12px;
+}
+
+
+/* Sidebar */
+.sidebar{
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 350px;
+    height: 100%;
+    background-color: #FFF;
+    transition: all 0.3s ease-in; 
+    overflow-y: auto;
+    padding-bottom: 200px;
+}
+
+.sidebar.open{
+    left: 0;
+}
+
+.top_sidebar{
+    padding: 47px 40px 20px 30px;
+    justify-content: space-between;
+    border-bottom: 0.5px solid var(--dark-primary-color);
+}
+
+.top_sidebar #close_menu {
+    font-size: 28px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sidebar_item{
+    padding-left: 30px;
+    font-size: 20px;
+    gap: 12px;
+}
+.sidebar_item a,
+.sidebar_d_items{
+    position: relative;
+    line-height: 55px;
+    gap: 15px;
+    border-bottom: 0.5px solid rgba(34, 40, 49, .05); 
+}
+
+.sidebar_item a i,
+.sidebar_d_items i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    transition: all 0.3ms ease;
+}
+
+.sidebar_item a:hover i,
+.sidebar_d_items:hover i{
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.sidebar_item a:hover,
+.sidebar_item a.active,
+.sidebar_item .sidebar_d_items:hover,
+.sidebar_item .sidebar_d_items.active,
+.sidebar_item ul li:hover a,
+.sidebar_item ul li a.active{
+    border-right: 2px solid var(--hover-color);
+    color: var(--hover-color);
+    background-color: #fdfdfd;
+}
+
+.sidebar_item img{
+    height: 30px;
+}
+
+.sidebar_item ul{
+    display: none;
+    width: 100%;
+    padding-left: 40px;
+    transition: all 0.3ms ease-in-out;
+}
+
+.sidebar_item ul.active{
+    display: block;
+}
+
+.sidebar_item ul li a{
+    font-weight: 300 !important;
+    font-size: 17px;
+    display: block;
+    border-bottom: none;
+}
+
+
+
+
+/* Login Modal */
+.login_box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 450px;
+    height: 90%;
+    max-height: 600px;
+    background-color: #FFF;
+    transform: translate(-50%, -50%);
+    z-index: 199;  
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3ms ease;
+}
+
+#login_model{
+    display: none;
+}
+
+#login_model.active{
+    display: flex;
+}
+
+.login_box #close_l_model{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    justify-content: center;
+    background-color: #FFF5E0;
+    border: 0.5px solid var(--dark-primary-color);
+    z-index: 200;
+}
+
+.login_box .f_s_l{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 50px 50px 20px 50px; 
+}
+
+
+.login_box h2{
+    font-family: 'Lilita One', sans-serif;
+    font-size: 24px;
+}
+
+.f_s_l .text_c p{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.f_s_l .inputs input{
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: .4px solid var(--primary-color);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    color: var(--dark-primary-color);
+    font-size: 16px;
+}
+
+.f_s_l button{
+    margin-top: -15px;
+}
+
+.login_box .other_op{
+    background-color: #FFF5E0;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+}
+.other_op .logos{
+    margin-top: 20px;
+    justify-content: center;
+    gap: 20px;
+}
+.other_op .logos a img{
+    width: 45px;
+}
+
+
+
+
+
+
+
+@media screen and (width <= 500px) {
+    .container{
+        padding: 0 15px;
+    }
+
+    .section_title{
+        padding-left: 15px;
+    }
+
+    /* Header */
+    .top_header .th_item{
+        display: none;
+    }
+
+    .top_header{
+        justify-content: right;
+    }
+
+    .right_header{
+        display: none;
+    }
+
+    /* Hero Section */
+    h1{
+        font-size: 32px;
+    }
+
+    .content_sec .hero_subtitle{
+        font-size: 14px;
+    }
+
+    button{
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* Service Section */
+    .service_cards{
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+    .service_card{
+        width: 100%;
+    }
+
+    /* Footer */
+    .top_footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .top_footer div{
+        width: 100%;
+    }
+
+    .newslatter_box{
+        width: 100%;
+    }
+
+    .newslatter_box input{
+        width: 100%;
+        border-radius: 6px ;
+        margin-bottom: 12px;
+    }
+
+    .newslatter_box button{
+        width: 100% !important;
+    }
+
+    .bottom_footer{
+        height: max-content;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0 30px 0;
+    }
+
+}
+
+@media (width > 500px) and (width <= 1200px){
+    .container{
+        padding: 0 50px;
+    }
+    .section_title{
+        padding-left: 50px;
+    }
+}
+
+@media (width > 1200px) and (width <= 1800px){
+    .service_card{
+        width: 31%;
+    }
+
+    .com_desc,
+    .newslatter{
+        width: 350px;
+    }
+
+    .newslatter_box input,
+    .newslatter_box button{
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+    
+}
+
+@media (width > 800px) and (width <= 1200px){
+    .com_desc{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
