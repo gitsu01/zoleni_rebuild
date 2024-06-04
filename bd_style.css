@@ -1,5 +1,7 @@
 .bd_main{
     position: relative;
+    height: calc(100vh - 125px);
+    overflow-y: auto;
 }
 
 .bd_main_right{
@@ -32,7 +34,6 @@
 
 .input_section{
     margin-left: 150px; 
-    width: 100%;
     max-width: 830px;   
 }
 
@@ -55,18 +56,129 @@
 }
 
 .double_inp{
-    width: 100%;
-    max-width: 410px;
+    width: 410px;
 }
 
 .single_inp{
-    width: 100%;
-    max-width: 200px;
+    width: 200px;
 }
 
-input.bd_form_btn{
+input.bd_form_btn,
+a.sc_det_btn{
     margin-top: 15px;
     width: 200px;
     background-color: #FFF5E0;
     border-radius: none !important;
+}
+
+/* Company Details */
+#companies{
+    margin-top: 40px;
+}
+.sin_com_card{
+    width: 830px;
+    height: 200px;
+    display: flex;
+    position: relative;
+    box-shadow: var(--shadow-dark);
+    margin-bottom: 20px;
+}
+
+.right_sin_com{
+    padding: 20px;
+}
+.right_sin_com h3{
+    font-size: 20px;
+    font-family: 'Lilita One', sans-serif;
+    margin-bottom: 10px;
+}
+
+.right_sin_com p{
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.right_sin_com p i{
+    font-size: 18px;
+    opacity: 1 !important;
+}
+
+.sc_det_btn{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 180px !important;
+    justify-content: center;
+    /* text-align: center; */
+}
+
+@media screen and (width <= 500px) {
+    .page_title{
+        padding-top: 15px;
+    }
+
+    .input_section{
+        margin: 0 15px;    
+    }
+
+    .double_inp,
+    .single_inp{
+        width: 100%;
+    }
+    
+    .bd_main_right{
+        display: none;
+    }
+
+    .sin_com_card{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    .left_sin_com img{
+        width: 100%;
+        aspect-ratio: 2/1;
+        object-fit: cover;
+    }
+
+}
+
+@media (width > 500px) and (width <= 1000px){
+    
+    .page_title{
+        padding-top: 15px;
+    }
+
+    .input_section{
+        margin: 0 50px;    
+    }
+
+    .sin_com_card{
+        width: 100%;
+        height: 250px;
+    }
+
+    .left_sin_com img{
+        height: 100%;
+    }
+
+    .right_sin_com p{
+        margin-bottom: 5px;
+    }
+}
+
+@media (width > 1000px) and (width <= 1400px){
+    .input_section{
+        margin: 0 50px;
+    }
+    
+}
+
+@media (width > 1400px) and (width <= 1800px){
+    .bd_main_right{
+        width: calc(100vw - 1030px);
+    }
+
 }
