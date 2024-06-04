@@ -36,3 +36,11 @@ login_c_btn.addEventListener('click', () => {
 })
 
 
+// Local Time
+let show_time = document.getElementById('local_time');
+setInterval(() => {
+    let time = new Date();
+    let time_now = time.toLocaleTimeString();
+    show_time.innerText = time_now;
+},1000)
+
