@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Lilita+One&display=swap');
 
 :root {
-    --primary-color: #99BC85;
+    --primary-color: #F40D15;
     --light-primary-color: #D4E7C5;
     --dark-primary-color: #222831;
     --hover-color: #615EFC;
@@ -45,16 +45,27 @@ body {
     align-items: center;
 }
 
-button {
+button{
     outline: none;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
-    height: 45px;
-    padding: 0 32px;
+    height: 42px;
+    padding: 0 28px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
+}
+
+.right_header select
+{
+    outline: none;
+    border: none;
+    border: .5px solid var(--dark-primary-color);
+    height: 42px;
+    padding: 0 18px;
+    font-size: 15px;
+    border-radius: 8px;
 }
 
 .btn_pri{
@@ -69,6 +80,7 @@ button {
     box-shadow: var(--shadow-thin);
     background: transparent;
 }
+
 
 .btn_sec i{
     color: var(--primary-color);
@@ -89,33 +101,11 @@ body::-webkit-scrollbar-thumb{
     background: transparent;
 }
 
-/* Top Header */
-
-.top_header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 45px;
-    background-color: var(--light-primary-color);
-    /* font-size: 12px;      */
-}
-.top_header .social_links{
-    display: flex;
-    gap: 20px;
-}
-.social_links a i{
-    font-size: 20px;
-}
-.social_links a:hover i,
-.th_item:hover i{
-    color: var(--hover-color);
-}
-
 /* Main Header */
 .header {
     background-color: #fff;
     justify-content: space-between;
-    height: 80px;
+    height: 70px;
     border-top: .5px solid var(--dark-primary-color);
     border-bottom: .5px solid var(--dark-primary-color);
 }
@@ -136,6 +126,10 @@ body::-webkit-scrollbar-thumb{
 
 .right_header{
     gap: 16px;
+}
+
+#local_time{
+    width: 125px !important;
 }
 
 /* Hero Section */

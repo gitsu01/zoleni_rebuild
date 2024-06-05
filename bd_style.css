@@ -7,10 +7,9 @@
 .bd_main_right{
     position: fixed;
     right: 0;
-    top: 0;
-    height: 100vh;
+    top: 70px;
+    height: calc(100vh - 70px);
     width: calc(100vw - 1250px);
-    background-color: antiquewhite;
     z-index: -1;
 }
 
