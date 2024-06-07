@@ -1,0 +1,99 @@
+.page_inp_sec{
+    display: flex;
+    gap: 50px;
+}
+.page_title_sec{
+    margin: 30px auto !important;
+}
+
+.page_title_sec .slug{
+    font-size: 14px;
+}
+
+.page_title_sec .page_title{
+    font-family: 'Lilita One', sans-serif;
+    font-size: 24px ;
+}
+
+.page_inp_sec .right_inp_sec{
+    min-width: 715px !important;
+    width: 100%;
+}
+
+
+.ist_sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 12px; */
+}
+#add_package{
+    height: 25px;
+    padding: 0;
+    background: transparent;
+}
+
+#add_package i{
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+.inp_sec_title{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.full_inp_sec{
+    display: flex;
+    gap: 15px;
+}
+
+.half_inp {
+    width: calc(50% - 7.5px);
+}
+
+/* .half_inp > *{
+    margin-bottom: 12px;
+} */
+
+input {
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--dark-primary-color);
+    height: 40px;
+    padding: 0 12px;    
+    margin-bottom: 12px;
+}
+
+.page_btn {
+    width: fit-content;
+    padding: 0 35px;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.page_main_btn{
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    border-radius: 0px !important;
+    font-weight: 600;
+    color: #fdfdfd;
+}
+
+
+/* Left */
+.left_inp_sec{
+    width: auto;
+    height: auto;
+}
+
+.left_inp_sec img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
