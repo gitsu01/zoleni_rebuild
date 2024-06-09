@@ -177,7 +177,6 @@
                 <option value="USD">USD</option>
             </select>
             <button class="btn_sec">
-                <i class="bi bi-question"></i>
                 Help
             </button>
             <button class="btn_pri" id="login_btn">
@@ -226,9 +225,13 @@
                     </button>
                 </div>
                 <div class="full_inp_sec">
-                    <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Name">
-                    <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Name">
-
+                    <select class="select" name="package_type" id="package_type">
+                        <option value="">Select Box Type</option>
+                        <option value="envelope">Envelope (4' x 18' x 18')</option>
+                        <option value="small">Small (12' x 12' x 12')</option>
+                        <option value="medium">Medium (16' x 16' x 16')</option>
+                    </select>
+                    <select class="select" name="package_quantity" id="package_quantity"></select>
                 </div>
             </div>
             <div class="full_inp_sec insurance">
@@ -300,7 +303,15 @@
             </div>
         </div>
     </footer>
-
+    
+    <script>
+        let package_quantity = document.getElementById('package_quantity');
+        let child = `<option value="">Select Box Quanity</option>`;
+        for (let i = 1; i <= 100; i++) {
+            child += (`<option value="${i}">${i}</option>`);          
+        }
+        package_quantity.innerHTML = child;
+    </script>
     <script src="../index.js"></script>
     
 </body>
