@@ -98,3 +98,57 @@ input,
     object-fit: cover;
     object-position: center;
 }
+
+@media screen and (width <= 500px) {
+    .left_inp_sec {
+        display: none;
+    }
+
+    .full_inp_sec {
+        flex-direction: column;
+    }
+
+    .page_inp_sec .right_inp_sec{
+        min-width: 100% !important;
+    }
+
+    .half_inp {
+        width: 100%;
+    }
+
+    .gap_0 {
+        gap: 0;
+    } 
+
+    .page_btn {
+        width: 100%;
+        /* padding: 0 35px; */
+    }
+
+}
+
+@media (width > 500px) and (width <= 800px){
+    .left_inp_sec {
+        display: none;
+    }
+
+    .page_inp_sec{
+        display: block;
+    }
+}
+
+@media (width > 800px) and (width <= 1200px){
+    .page_inp_sec{
+        gap: 25px;
+    }
+    .page_inp_sec .right_inp_sec{
+        min-width: 615px !important;      
+    }
+
+}
+
+@media (width > 1200px) and (width <= 1800px){
+    
+    
+}
+
