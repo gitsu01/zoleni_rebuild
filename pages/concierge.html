@@ -225,7 +225,7 @@
                     </button>
                 </div>
                 <div id="package_sec">
-                    <div class="full_inp_sec gap_0 ">
+                    <div class="package_item full_inp_sec gap_0 " _uid="0">
                         <select class="select" name="package_type" id="package_type">
                             <option value="">Select Box Type</option>
                             <option value="envelope">Envelope (4' x 18' x 18')</option>
@@ -326,26 +326,43 @@
         // Add Package
         let add_package = document.getElementById('add_package');
         let package_sec = document.getElementById('package_sec');
-
-        let elm = document.createElement('div');
-        elm.classList.add('full_inp_sec');
-        elm.classList.add('gap_0');
-        elm.innerHTML = `
-            <select class="select" name="package_type" id="package_type">
-                <option value="">Select Box Type</option>
-                <option value="envelope">Envelope (4' x 18' x 18')</option>
-                <option value="small">Small (12' x 12' x 12')</option>
-                <option value="medium">Medium (16' x 16' x 16')</option>
-            </select>
-            <select class="select package_quantity" name="package_quantity" id="package_quantity">
-                ${child}
-            </select>
-        `;
-        
+     
         add_package.addEventListener('click', () => {
-            // console.log("Clicked");
+            let ran_num = Math.floor(Math.random() * 1000000);
+            let elm = document.createElement('div');
+            elm.classList.add('package_item','full_inp_sec','gap_0');
+
+            elm.setAttribute('_uid', ran_num);
+            elm.innerHTML = `
+                <select class="select" name="package_type" id="package_type">
+                    <option value="">Select Box Type</option>
+                    <option value="envelope">Envelope (4' x 18' x 18')</option>
+                    <option value="small">Small (12' x 12' x 12')</option>
+                    <option value="medium">Medium (16' x 16' x 16')</option>
+                </select>
+                <select class="select package_quantity" name="package_quantity" id="package_quantity">
+                    ${child}
+                </select>
+                <button class="side_delete_btn" onclick="delete_pack_item(${ran_num})"><i class="bi bi-trash"></i></button>
+            `;
+
             package_sec.appendChild(elm);
         })
+
+
+        
+        function delete_pack_item(val) {
+            let pac_item_list = document.querySelectorAll('.package_item');
+            val = parseInt(val);
+
+            pac_item_list.forEach((item) => {
+                let key = parseInt(item.getAttribute('_uid'));
+                if(val == key){
+                    package_sec.removeChild(item);
+                }
+            })            
+
+        }
     </script>
     <script src="../index.js"></script>
     

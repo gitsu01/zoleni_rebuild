@@ -67,7 +67,8 @@ input,
     margin-bottom: 12px;
 }
 
-.page_btn {
+.page_btn,
+.side_delete_btn {
     width: fit-content;
     padding: 0 35px;
     border: 2px solid var(--primary-color);
@@ -75,6 +76,11 @@ input,
     color: var(--primary-color);
     font-weight: 600;
     cursor: pointer;
+}
+
+.side_delete_btn{
+    padding: 0 10px !important;
+    border-radius: 0 !important;
 }
 
 .page_main_btn{
