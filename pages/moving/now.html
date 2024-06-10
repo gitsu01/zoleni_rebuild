@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concierge - Zoleni</title>
+    <link rel="stylesheet" href="../pages_style.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="top_sidebar flex_align">
+            <a href="../../index.html">
+                <img src="../../images/zoleni_logo.png" alt="#" height="40px">
+            </a>
+            <i class="bi bi-x-lg"  id="close_menu"></i>
+        </div>
+        <ul class="middle_sidebar">
+            <li class="sidebar_item">
+                <a href="#" class="flex_align">
+                    <img src="../../images/icons/Front_Desk.svg" alt="Home">
+                    Concierge
+                </a>
+            </li>
+            <li class="sidebar_item">
+                <div id="delivery" class="flex_align sidebar_d_items">
+                    <img src="../../images/icons/Delivery.svg" alt="Home">
+                    Delivery
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <ul id="delivery_list">
+                    <li><a href="./now.html">Now</a></li>
+                    <li><a href="./schedule.html">Schedule</a></li>
+                    <li><a href="#">Ongoing</a></li>
+                    <li><a href="./sameday.html">Same Day</a></li>
+                    <li><a href="#">Multi Order - Same Pickup</a></li>
+                    <li><a href="#">Multi Order - Same Dropoff</a></li>
+                    <li><a href="">Interactive Delivery</a></li>
+                </ul>
+            </li>            
+            <li class="sidebar_item">
+                <div id="moving" class="flex_align sidebar_d_items">
+                    <img src="../../images/icons/Heavy.svg" alt="Home">
+                    Moving
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <ul id="moving_list">
+                    <li><a href="#">Booking Now</a></li>
+                    <li><a href="#">Business Directory</a></li> 
+                </ul>
+            </li>
+            <li class="sidebar_item">
+                <div id="storage" class="flex_align sidebar_d_items">
+                    <img src="../../images/icons/Storage.svg" alt="Home">
+                    Storage
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <ul id="storage_list">
+                    <li><a href="#">Booking Now</a></li>
+                    <li><a href="#">Business Directory</a></li> 
+                </ul>
+            </li>
+            <li class="sidebar_item">
+                <div id="ship" class="flex_align sidebar_d_items">
+                    <img src="../../images/icons/In_Transit.svg" alt="Home">
+                    Ship
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <ul id="ship_list">
+                    <li><a href="./business_directory.html">Business Directory</a></li> 
+                </ul>
+            </li>
+            <li class="sidebar_item">
+                <div id="gig" class="flex_align sidebar_d_items">
+                    <img src="../../images/icons/Opened_Folder.svg" alt="Home">
+                    Gig Pro
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <ul id="gig_list">
+                    <li><a href="#">Business Directory</a></li> 
+                </ul>
+            </li>
+            <li class="sidebar_item">
+                <div id="quote" class="flex_align sidebar_d_items">
+                    <img src="../../images/icons/Quote.svg" alt="Home">
+                    Quote Rate
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <ul id="quote_list">
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Interactive Delivery</a></li>
+                    <li><a href="#">Moving</a></li> 
+                    <li><a href="#">Storage</a></li> 
+                    <li><a href="#">Ship</a></li> 
+                </ul>
+            </li>
+            <li class="sidebar_item">
+                <div id="lead_net" class="flex_align sidebar_d_items">
+                    <img src="../../images/icons/Network.png" alt="Home">
+                    Lead Network
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <ul id="lead_net_list">
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Interactive Delivery</a></li>
+                    <li><a href="#">Moving</a></li> 
+                    <li><a href="#">Storage</a></li> 
+                    <li><a href="#">Ship</a></li> 
+                </ul>
+            </li>
+        </ul>
+        <div class="bottom_sidebar flex_align">
+            <button class="btn_sec">
+                <i class="bi bi-question"></i>
+                Help
+            </button>
+            <button class="btn_pri" id="sidebar_login_btn">
+                Login
+            </button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login_model" class="login_box flex_align">        
+        <div id="close_l_model" class="flex_align">
+            <i class="bi bi-x-lg" ></i>
+        </div>
+        <form class="f_s_l">
+            <div class="text_c">
+                <h2>Welcome Back</h2>
+                <p>Lorem ipsum dolor sit amet elit. Sunt omnis fugiat velit libero?</p>
+            </div>
+            <div class="inputs">
+                <input type="email" name="log_email" id="log_email" placeholder="Email Address"> 
+                <input type="password" name="log_pass" id="log_pass" placeholder="Password">
+            </div>
+            <button class="btn_pri" type="submit">Login</button>
+        </form>
+        <h2>OR</h2>
+        <div class="other_op">
+            <h2>Sign Up With</h2>
+            <div class="logos flex_align">
+                <a href="#">
+                    <img src="../../images/icons/Google.svg" alt="google">
+                </a>
+                <a href="#">
+                    <img src="../../images/icons/Facebook.svg" alt="google">
+                </a>
+                <a href="#">
+                    <img src="../../images/icons/Apple Logo.svg" alt="google">
+                </a>
+                <a href="#">
+                    <img src="../../images/icons/Amazon.svg" alt="google">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="container header flex_align">
+        <div class="left_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" id="open_menu" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+            <a id="main_logo" href="../../index.html">
+                <img src="../../images/zoleni_logo.png" alt="zoleni.com">
+            </a>
+        </div>
+        <div class="right_header flex_align">
+            <select name="country" id="country">
+                <option value="can">Toronto</option>
+            </select>
+            <select name="currency" id="currency">
+                <option value="CAD">CAD</option>
+                <option value="USD">USD</option>
+            </select>
+            <button class="btn_sec">
+                Help
+            </button>
+            <button class="btn_pri" id="login_btn">
+                Login
+            </button>
+            <button class="btn_pri" id="local_time"></button>  
+        </div>
+    </header>
+
+    <!-- Title Section-->
+    <div class="container page_title_sec">
+        <div class="slug">
+            <a href="../../index.html" class="slug_item">Home</a>
+            <span class="slug_item">></span>
+            <a href="#" class="slug_item">Booking</a>
+        </div>
+        <h2 class="page_title">BOOKING</h2>
+    </div>
+
+    <!-- Input Section -->
+    <div class="container page_inp_sec">
+        <div class="left_inp_sec">
+            <img src="../../images/hero.png" alt="image">
+        </div>
+        <div class="right_inp_sec">
+            <div class="half_inp">
+                <h3 class="inp_sec_title">Choose Booking Style</h3>
+                <select class="select" name="booking_type" id="booking_type">
+                    <option value="hourly">Hourly</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>                    
+                </select>
+            </div>
+            <div id="booking_html">
+
+                <div id="truck&labors">
+                    <h3 class="inp_sec_title">Truck Size & Hours</h3>
+                    <div class="full_inp_sec gap_0">
+                        <select class="select" name="truck_size" id="truck_size">
+                            <option value="">Select</option>
+                            <option value="">10ft [ $5/Hour ]</option>
+                            <option value="">14ft [ $10/Hour ]</option>
+                            <option value="">20ft [ $15/Hour ]</option>
+                            <option value="">22ft [ $20/Hour ]</option>
+
+                        </select>
+                        <select class="select" name="time" id="time">
+                            <option value="">Time</option>
+                            <option value="">1 Hours</option>
+                            <option value="">2 Hours</option>
+                            <option value="">3 Hours</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="labors&time">
+                    <h3 class="inp_sec_title">Labors & Hours</h3>
+                    <div class="full_inp_sec gap_0">
+                        <select class="select" name="truck_size" id="truck_size">
+                            <option value="">Select Number of Labor</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+
+                        </select>
+                        <select class="select" name="time" id="time">
+                            <option value="">Hours for Loading & Unloading</option>
+                            <option value="">1 Hours</option>
+                            <option value="">2 Hours</option>
+                            <option value="">3 Hours</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="moving_info">
+                    <h3 class="inp_sec_title">Moving Informaion</h3>
+                    <div class="full_inp_sec gap_0">
+                        <select class="select" name="truck_size" id="truck_size">
+                            <option value="">Building Type</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+
+                        </select>
+                        <select class="select" name="time" id="time">
+                            <option value="">Type of Entrance [From]</option>
+                            <option value="">1 Hours</option>
+                            <option value="">2 Hours</option>
+                            <option value="">3 Hours</option>
+                        </select>
+                        <select class="select" name="truck_size" id="truck_size">
+                            <option value="">Type of Entrance [To]</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+
+                        </select>
+                        <select class="select" name="time" id="time">
+                            <option value="">Area Size</option>
+                            <option value="">1 Hours</option>
+                            <option value="">2 Hours</option>
+                            <option value="">3 Hours</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="spacial_artical">
+                    <h3 class="inp_sec_title">Spacial Articals</h3>
+                    <div class="full_inp_sec gap_0">
+                        <div class="half_inp">
+                            <div class="subtitle_sec">
+                                <h5>Any item over 150 Lbs ($5/qty.)</h5>
+                                <div id="150_val">
+                                    $ 5
+                                </div>
+                            </div>
+                            <select class="select" name="item_150_lbs" id="item_150_lbs">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                            </select>
+                        </div>
+                        <div class="half_inp">
+                            <div class="subtitle_sec">
+                                <h5>Baby Piano ($10/qty.)</h5>
+                                <div id="150_val">
+                                    $ 5
+                                </div>
+                            </div>
+                            <select class="select" name="item_150_lbs" id="item_150_lbs">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="full_inp_sec gap_0">
+                        <div class="half_inp">
+                            <div class="subtitle_sec">
+                                <h5>Double Door Fridge ($5/qty.)</h5>
+                                <div id="150_val">
+                                    $ 5
+                                </div>
+                            </div>
+                            <select class="select" name="item_150_lbs" id="item_150_lbs">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                            </select>
+                        </div>
+                        <div class="half_inp">
+                            <div class="subtitle_sec">
+                                <h5>Grand Piano ($8/qty.)</h5>
+                                <div id="150_val">
+                                    $ 5
+                                </div>
+                            </div>
+                            <select class="select" name="item_150_lbs" id="item_150_lbs">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="full_inp_sec gap_0">
+                        <div class="half_inp">
+                            <div class="subtitle_sec">
+                                <h5>Heavy Gym Equipment ($20/qty.)</h5>
+                                <div id="150_val">
+                                    $ 5
+                                </div>
+                            </div>
+                            <select class="select" name="item_150_lbs" id="item_150_lbs">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                            </select>
+                        </div>
+                        <div class="half_inp">
+                            <div class="subtitle_sec">
+                                <h5>Hot Tub ($5/qty.)</h5>
+                                <div id="150_val">
+                                    $ 5
+                                </div>
+                            </div>
+                            <select class="select" name="item_150_lbs" id="item_150_lbs">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="full_inp_sec gap_0">
+                        <div class="half_inp">
+                            <div class="subtitle_sec">
+                                <h5>Industrial Equipment ($15/qty.)</h5>
+                                <div id="150_val">
+                                    $ 5
+                                </div>
+                            </div>
+                            <select class="select" name="item_150_lbs" id="item_150_lbs">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                            </select>
+                        </div>
+                        <div class="half_inp">
+                            <div class="subtitle_sec">
+                                <h5>Large Office Printer ($10/qty.)</h5>
+                                <div id="150_val">
+                                    $ 5
+                                </div>
+                            </div>
+                            <select class="select" name="item_150_lbs" id="item_150_lbs">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="full_inp_sec gap_0">
+                        <div class="half_inp">
+                            <div class="subtitle_sec">
+                                <h5>Pool Table ($10/qty.)</h5>
+                                <div id="150_val">
+                                    $ 5
+                                </div>
+                            </div>
+                            <select class="select" name="item_150_lbs" id="item_150_lbs">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                            </select>
+                        </div>
+                        <div class="half_inp">
+                            <div class="subtitle_sec">
+                                <h5>Upright Piano ($15/qty.)</h5>
+                                <div id="150_val">
+                                    $ 5
+                                </div>
+                            </div>
+                            <select class="select" name="item_150_lbs" id="item_150_lbs">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="moving_op">
+                <div class="date&time">
+                    <h3 class="inp_sec_title">Moving Information</h3>
+                    <div class="full_inp_sec gap_0">
+                        <input type="date" name="dare" id="dare">
+                        <select class="select" name="package_type" id="package_type">
+                            <option value="">Time</option>
+                            <option value="envelope">00:00</option>
+                            <option value="envelope">00:15</option>
+                            <option value="envelope">00:30</option>
+                            <option value="envelope">00:45</option>
+                            <option value="envelope">01:00</option>
+                            <option value="envelope">01:15</option>
+                            <option value="envelope">01:30</option>
+                            <option value="envelope">01:45</option>
+                            <option value="envelope">02:00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="pickup_details">
+                <h3 class="inp_sec_title">Pickup Details</h3>
+                <input type="text" class="page_inp" placeholder="Type Your Address">
+                <div class="full_inp_sec gap_0">
+                    <input type="text" class="page_inp" placeholder="Contact Name">
+                    <input type="text" class="page_inp" placeholder="Unit/Suite Number">
+                    <input type="text" class="page_inp" placeholder="Contact Number">
+                </div>
+                <input type="text" class="page_inp" placeholder="Address Instruction">
+            </div>
+            <div class="pickup_details">
+                <h3 class="inp_sec_title">Dropoff Details</h3>
+                <input type="text" class="page_inp" placeholder="Type Your Address">
+                <div class="full_inp_sec gap_0">
+                    <input type="text" class="page_inp" placeholder="Contact Name">
+                    <input type="text" class="page_inp" placeholder="Unit/Suite Number">
+                    <input type="text" class="page_inp" placeholder="Contact Number">
+                </div>
+                <input type="text" class="page_inp" placeholder="Address Instruction">
+            </div>
+            <div class="full_inp_sec users_det">
+                <div class="half_inp insurance">
+                    <h3 class="inp_sec_title">Insurance</h3>
+                    <select class="select" name="ins_type" id="ins_type">
+                        <option value="">Select Insurance Type</option>
+                        <option value="envelope">No, I dont need insurance</option>
+                        <option value="100">Yes, $ 100 [  Pay $ 10  ]</option>
+                        <option value="150">Yes, $ 150 [  Pay $ 15  ]</option>
+                        <option value="small">Yes, $ 200 [  Pay $ 20  ]</option>
+                        <option value="small">Yes, $ 250 [  Pay $ 25  ]</option>
+                        <option value="small">Yes, $ 300 [  Pay $ 30  ]</option>
+                    </select>
+                </div>
+                <div class="half_inp driver_tip">
+                    <h3 class="inp_sec_title">Driver Tip</h3>
+                    <input type="number" name="receiver_name" id="receiver_name" class="page_inp" placeholder="Enter a tip amount [ $0 to infinity ]">
+                </div>
+            </div>
+            <div class="your_contact">
+                <h3 class="inp_sec_title">Your Contact</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Your Name">
+                    <input type="text" placeholder="Email Address">
+                    <input type="text" placeholder="Contact Number">
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Write Note">
+                </div>
+            </div>
+            <button class="page_main_btn" type="submit">Continue</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container top_footer">
+            <div class="foot_item com_desc">
+                <div>
+                    <a href="#">
+                        <img src="../../images/zoleni_logo.png" alt="logo" height="40px">
+                    </a>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi aliquam earum commodi iure debitis minus enim. Praesentium ducimus facilis tempora voluptates, tempore ullam cupiditate veritatis perferendis. Et cumque animi dolor.</p>
+                </div>
+                <button class="btn_pri download_btn">Download App</button>
+            </div>
+            <div class="foot_item">
+                <h4>Helpful Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Tearms</a></li>
+                </ul>
+            </div>
+            <div class="foot_item">
+                <h4>Account Links</h4>
+                <ul>
+                    <li><a href="#">Customer</a></li>
+                    <li><a href="#">Driver</a></li>
+                    <li><a href="#">Corporate</a></li>
+                </ul>
+            </div>
+            <div class="foot_item newslatter">
+                <div>
+                    <h4 style="padding-bottom: 8px;">Sign Up to News Later</h4>
+                    <p>Subscribe our newsletter for get notification <br>about information & discount.</p>
+                </div>
+                <div class="newslatter_box">
+                    <input type="email" name="email" id="news_email" placeholder="Enter Your Email">
+                    <button class="btn_pri news_btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="bottom_footer flex_align container">
+            <p>All rights reserved with Zoleni.com</p>
+            <div class="payments flex_align">
+                <img src="../../images/payment-img1.png" alt="pay">
+                <img src="../../images/payment-img2.png" alt="pay">
+                <img src="../../images/payment-img3.png" alt="pay">
+                <img src="../../images/payment-img4.png" alt="pay">
+                <img src="../../images/payment-img5.png" alt="pay">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Package Quantity
+        let package_quantity = document.getElementById('package_quantity');
+        let child = `<option value="">Select Box Quanity</option>`;
+        for (let i = 1; i <= 100; i++) {
+            child += (`<option value="${i}">${i}</option>`);          
+        }
+        package_quantity.innerHTML = child;
+    </script>
+    <script src="./now.js"></script>
+    <script src="../../index.js"></script>
+    
+</body>
+</html>

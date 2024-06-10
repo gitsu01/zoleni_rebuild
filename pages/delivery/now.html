@@ -19,7 +19,7 @@
         </div>
         <ul class="middle_sidebar">
             <li class="sidebar_item">
-                <a href="#" class="flex_align">
+                <a href="../concierge.html" class="flex_align">
                     <img src="../../images/icons/Front_Desk.svg" alt="Home">
                     Concierge
                 </a>
@@ -252,11 +252,17 @@
                         Add Package
                     </button>
                 </div>
-                <div class="full_inp_sec gap_0">
-                    <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Name">
-                    <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Name">
-
-                </div>
+                <div id="package_sec">
+                    <div class="full_inp_sec gap_0">
+                        <select class="select" name="package_type" id="package_type">
+                            <option value="">Select Box Type</option>
+                            <option value="envelope">Envelope (4' x 18' x 18')</option>
+                            <option value="small">Small (12' x 12' x 12')</option>
+                            <option value="medium">Medium (16' x 16' x 16')</option>
+                        </select>
+                        <select class="select" name="package_quantity" id="package_quantity"></select>
+                    </div>
+                </div> 
             </div>
             <div class="full_inp_sec users_det">
                 <div class="half_inp insurance">
@@ -333,6 +339,14 @@
         </div>
     </footer>
 
+    <script>
+        let package_quantity = document.getElementById('package_quantity');
+        let child = `<option value="">Select Box Quanity</option>`;
+        for (let i = 1; i <= 100; i++) {
+            child += (`<option value="${i}">${i}</option>`);          
+        }
+        package_quantity.innerHTML = child;
+    </script>
     <script src="../../index.js"></script>
     
 </body>
