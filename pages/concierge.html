@@ -225,14 +225,14 @@
                     </button>
                 </div>
                 <div id="package_sec">
-                    <div class="full_inp_sec gap_0">
+                    <div class="full_inp_sec gap_0 ">
                         <select class="select" name="package_type" id="package_type">
                             <option value="">Select Box Type</option>
                             <option value="envelope">Envelope (4' x 18' x 18')</option>
                             <option value="small">Small (12' x 12' x 12')</option>
                             <option value="medium">Medium (16' x 16' x 16')</option>
                         </select>
-                        <select class="select" name="package_quantity" id="package_quantity"></select>
+                        <select class="select package_quantity" name="package_quantity" id="package_quantity"></select>
                     </div>
                 </div>                
             </div>
@@ -316,12 +316,36 @@
     </footer>
     
     <script>
-        let package_quantity = document.getElementById('package_quantity');
+        let package_quantity = document.querySelectorAll('.package_quantity');
         let child = `<option value="">Select Box Quanity</option>`;
         for (let i = 1; i <= 100; i++) {
             child += (`<option value="${i}">${i}</option>`);          
         }
-        package_quantity.innerHTML = child;
+        package_quantity[0].innerHTML = child;
+
+        // Add Package
+        let add_package = document.getElementById('add_package');
+        let package_sec = document.getElementById('package_sec');
+
+        let elm = document.createElement('div');
+        elm.classList.add('full_inp_sec');
+        elm.classList.add('gap_0');
+        elm.innerHTML = `
+            <select class="select" name="package_type" id="package_type">
+                <option value="">Select Box Type</option>
+                <option value="envelope">Envelope (4' x 18' x 18')</option>
+                <option value="small">Small (12' x 12' x 12')</option>
+                <option value="medium">Medium (16' x 16' x 16')</option>
+            </select>
+            <select class="select package_quantity" name="package_quantity" id="package_quantity">
+                ${child}
+            </select>
+        `;
+        
+        add_package.addEventListener('click', () => {
+            // console.log("Clicked");
+            package_sec.appendChild(elm);
+        })
     </script>
     <script src="../index.js"></script>
     
