@@ -1,7 +1,4 @@
-.page_inp_sec{
-    display: flex;
-    gap: 50px;
-}
+
 .page_title_sec{
     margin: 30px auto !important;
 }
@@ -16,8 +13,8 @@
 }
 
 .page_inp_sec .right_inp_sec{
-    min-width: 715px !important;
-    width: 100%;
+    /* min-width: 715px !important; */
+    width: 1000px;
 }
 
 
@@ -61,17 +58,25 @@ input,
 .select {
     width: 100%;
     outline: none;
-    border: 1px solid var(--dark-primary-color);
-    height: 40px;
+    border: 1px solid #ddd;
+    height: 43px;
     padding: 0 12px;    
     margin-bottom: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
 }
-
+.page_btn
+{    
+    color: #fdfdfd !important;
+    background-color: var(--primary-color) !important;
+}
 .page_btn,
 .side_delete_btn {
     width: fit-content;
     padding: 0 35px;
     border: 2px solid var(--primary-color);
+    border-radius: 20px !important;
     background: transparent;
     color: var(--primary-color);
     font-weight: 600;
@@ -80,13 +85,13 @@ input,
 
 .side_delete_btn{
     padding: 0 10px !important;
-    border-radius: 0 !important;
+    border-radius: 50% !important;
 }
 
 .page_main_btn{
     margin-top: 30px;
     background-color: var(--primary-color);
-    border-radius: 0px !important;
+    border-radius: 20px !important;
     font-weight: 600;
     color: #fdfdfd;
 }

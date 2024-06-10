@@ -198,9 +198,6 @@
 
     <!-- Input Section -->
     <div class="container page_inp_sec">
-        <div class="left_inp_sec">
-            <img src="../images/hero.png" alt="image">
-        </div>
         <div class="right_inp_sec">
             <div class="full_inp_sec users_det">
                 <div class="half_inp sender">
@@ -231,6 +228,17 @@
                             <option value="envelope">Envelope (4' x 18' x 18')</option>
                             <option value="small">Small (12' x 12' x 12')</option>
                             <option value="medium">Medium (16' x 16' x 16')</option>
+                            <option value="medium">Large (20' x 20' x 20')</option>
+                            <option value="medium">XLarge (28' x 28' x 28')</option>
+                            <option value="small">Flat Small (2' x 24' x 24')</option>
+                            <option value="medium">Flat Medium (2' x 24' x 48')</option>
+                            <option value="medium">Flat Large (2' x 48' x 48')</option>
+                            <option value="medium">Flat XLarge (2' x 48' x 96')</option>                            
+                            <option value="small">Tube Small (6' x 6' x 36')</option>
+                            <option value="medium">Tube Medium (10' x 10' x 50')</option>
+                            <option value="medium">Tube Large (10' x 10' x 96')</option>
+                            <option value="medium">Tube Medium (10' x 10' x 50')</option>
+                            <option value="medium">Tube Large (10' x 10' x 96')</option>
                         </select>
                         <select class="select package_quantity" name="package_quantity" id="package_quantity"></select>
                     </div>
@@ -240,14 +248,6 @@
                 <div class="half_inp">
                     <h3 class="inp_sec_title">Insurance</h3>
                     <select class="select" name="ins_type" id="ins_type">
-                        <option value="">Select Insurance Type</option>
-                        <option value="envelope">No, I dont need insurance</option>
-                        <option value="100">Yes, $ 100 [  Pay $ 10  ]</option>
-                        <option value="150">Yes, $ 150 [  Pay $ 15  ]</option>
-                        <option value="small">Yes, $ 200 [  Pay $ 20  ]</option>
-                        <option value="small">Yes, $ 250 [  Pay $ 25  ]</option>
-                        <option value="small">Yes, $ 300 [  Pay $ 30  ]</option>
-
                     </select>
                 </div>
             </div>
@@ -270,7 +270,7 @@
                     <a href="#">
                         <img src="../images/zoleni_logo.png" alt="logo" height="40px">
                     </a>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi aliquam earum commodi iure debitis minus enim. Praesentium ducimus facilis tempora voluptates, tempore ullam cupiditate veritatis perferendis. Et cumque animi dolor.</p>
+                    <p>Zoleni is an innovative online marketplace connecting customers with delivery, moving, concierge, and storage services. Our mission is to modernize and optimize these industries through technology.</p>
                 </div>
                 <button class="btn_pri download_btn">Download App</button>
             </div>
@@ -316,6 +316,25 @@
     </footer>
     
     <script>
+
+        // Insurance
+        let ins_type = document.getElementById('ins_type');
+        let ins_list = `
+            <option value="">Select Insurance Type</option>
+            <option value="envelope">No, I dont need insurance</option>
+        `;
+
+        let i = 10;
+        while (i <= 100) {
+            let element = `<option value="${i*10}">Yes, $ ${i*10} [  Pay $ ${i}  ]</option>`;
+            ins_list += element;
+            
+            i += 5;
+        }
+
+        ins_type.innerHTML = ins_list;
+
+        // Package
         let package_quantity = document.querySelectorAll('.package_quantity');
         let child = `<option value="">Select Box Quanity</option>`;
         for (let i = 1; i <= 100; i++) {
