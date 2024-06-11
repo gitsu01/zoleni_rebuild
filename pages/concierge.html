@@ -223,23 +223,7 @@
                 </div>
                 <div id="package_sec">
                     <div class="package_item full_inp_sec gap_0 " _uid="0">
-                        <select class="select" name="package_type" id="package_type">
-                            <option value="">Select Box Type</option>
-                            <option value="envelope">Envelope (4' x 18' x 18')</option>
-                            <option value="small">Small (12' x 12' x 12')</option>
-                            <option value="medium">Medium (16' x 16' x 16')</option>
-                            <option value="medium">Large (20' x 20' x 20')</option>
-                            <option value="medium">XLarge (28' x 28' x 28')</option>
-                            <option value="small">Flat Small (2' x 24' x 24')</option>
-                            <option value="medium">Flat Medium (2' x 24' x 48')</option>
-                            <option value="medium">Flat Large (2' x 48' x 48')</option>
-                            <option value="medium">Flat XLarge (2' x 48' x 96')</option>                            
-                            <option value="small">Tube Small (6' x 6' x 36')</option>
-                            <option value="medium">Tube Medium (10' x 10' x 50')</option>
-                            <option value="medium">Tube Large (10' x 10' x 96')</option>
-                            <option value="medium">Tube Medium (10' x 10' x 50')</option>
-                            <option value="medium">Tube Large (10' x 10' x 96')</option>
-                        </select>
+                        <select class="select" name="package_type" id="package_type"></select>
                         <select class="select package_quantity" name="package_quantity" id="package_quantity"></select>
                     </div>
                 </div>                
@@ -342,6 +326,27 @@
         }
         package_quantity[0].innerHTML = child;
 
+        // Package type
+        let package_type_list = `
+            <option value="">Select Box Type</option>
+            <option value="envelope">Envelope (4' x 18' x 18')</option>
+            <option value="small">Small (12' x 12' x 12')</option>
+            <option value="medium">Medium (16' x 16' x 16')</option>
+            <option value="large">Large (20' x 20' x 20')</option>
+            <option value="xlarge">XLarge (28' x 28' x 28')</option>
+            <option value="flat_small">Flat Small (2' x 24' x 24')</option>
+            <option value="flat_medium">Flat Medium (2' x 24' x 48')</option>
+            <option value="flat_large">Flat Large (2' x 48' x 48')</option>
+            <option value="flat_xlarge">Flat XLarge (2' x 48' x 96')</option>                            
+            <option value="tube_small">Tube Small (6' x 6' x 36')</option>
+            <option value="tube_medium">Tube Medium (10' x 10' x 50')</option>
+            <option value="tube_large">Tube Large (10' x 10' x 96')</option>
+            <option value="spacial_box">Spacial Box (10' x 30' x 55')</option>
+            <option value="wardrobe_box">Wardrobe Box (22' x 24' x 60')</option>
+        `;
+
+        document.getElementById('package_type').innerHTML = package_type_list;
+
         // Add Package
         let add_package = document.getElementById('add_package');
         let package_sec = document.getElementById('package_sec');
@@ -354,10 +359,7 @@
             elm.setAttribute('_uid', ran_num);
             elm.innerHTML = `
                 <select class="select" name="package_type" id="package_type">
-                    <option value="">Select Box Type</option>
-                    <option value="envelope">Envelope (4' x 18' x 18')</option>
-                    <option value="small">Small (12' x 12' x 12')</option>
-                    <option value="medium">Medium (16' x 16' x 16')</option>
+                    ${package_type_list}
                 </select>
                 <select class="select package_quantity" name="package_quantity" id="package_quantity">
                     ${child}
