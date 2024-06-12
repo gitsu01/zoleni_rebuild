@@ -32,7 +32,7 @@
                 </div>
                 <ul id="delivery_list">
                     <li><a href="./now.html">Now</a></li>
-                    <li><a href="./now.html">Schedule</a></li>
+                    <li><a href="./schedule.html">Schedule</a></li>
                     <li><a href="#">Ongoing</a></li>
                     <li><a href="./sameday.html">Same Day</a></li>
                     <li><a href="#">Multi Order - Same Pickup</a></li>
@@ -143,16 +143,16 @@
             <h2>Sign Up With</h2>
             <div class="logos flex_align">
                 <a href="#">
-                    <img src="../images/icons/Google.svg" alt="google">
+                    <img src="../../images/icons/Google.svg" alt="google">
                 </a>
                 <a href="#">
-                    <img src="../images/icons/Facebook.svg" alt="google">
+                    <img src="../../images/icons/Facebook.svg" alt="google">
                 </a>
                 <a href="#">
-                    <img src="../images/icons/Apple Logo.svg" alt="google">
+                    <img src="../../images/icons/Apple Logo.svg" alt="google">
                 </a>
                 <a href="#">
-                    <img src="../images/icons/Amazon.svg" alt="google">
+                    <img src="../../images/icons/Amazon.svg" alt="google">
                 </a>
             </div>
         </div>
@@ -201,99 +201,126 @@
         <div class="slug">
             <a href="../../index.html" class="slug_item">Home</a>
             <span class="slug_item">></span>
-            <a href="#" class="slug_item">Schedule_Delivery</a>
+            <a href="#" class="slug_item">Now_Delivery</a>
         </div>
-        <h2 class="page_title">SCHEDULE DELIVERY</h2>
+        <h2 class="page_title">SHIPPING LEAD</h2>
     </div>
 
     <!-- Input Section -->
     <div class="container page_inp_sec">
         <div class="right_inp_sec">
-            <div class="date&time">
-                <h3 class="inp_sec_title">Setect Date and Time</h3>
-                <div class="full_inp_sec gap_0">
-                    <input type="date" name="dare" id="dare">
-                    <select class="select" name="package_type" id="package_type">
-                        <option value="">Time</option>
-                    </select>
-                </div>
-            </div>
-            <div class="pickup_details">
-                <h3 class="inp_sec_title">Pickup Details</h3>
-                <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Type Your Address">
+            <div class="moving_lead_serach">
                 <div class="full_inp_sec gap_0">
                     <div class="half_inp">
-                        <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Contact Name">
-                        <input type="email" name="sender_email" id="sender_email" class="page_inp" placeholder="Unit/Suite Number">
+                        <select class="select" name="s_tower_build" id="s_tower_build">
+                            <option value="">Service Type</option>
+                            <option  value='233'>Full Truckload</option><option  value='232'>LTL</option><option  value='234'>Small Parcel</option></select>
+                        </select>
+                        <select class="select" name="s_tower_build" id="s_tower_build">
+                            <option value="">LTL service type</option>
+                            <option  value='231'>Hazardous</option><option  value='229'>Standard LTL</option><option  value='230'>Trade show</option></select>
+                        </select>
                     </div>
                     <div class="half_inp">
-                        <input type="text" name="receiver_name" id="receiver_name" class="page_inp" placeholder="Contact Number">
-                        <input type="enail" name="receiver_email" id="receiver_email" class="page_inp" placeholder="Address Instruction">
+                        <select class="select" name="s_tower_build" id="s_tower_build">
+                            <option value="">Delivering to or picking up from a trade show</option>
+                            <option value="Delivering">Delivering a shipment to a trade show</option>
+                            <option value="Picking-up">Picking up a shipment from a trade show</option>
+                        </select>
+                        <!-- <input type="enail" name="receiver_email" id="receiver_email" class="page_inp" placeholder="How many Leads you want?"> -->
                     </div>
                 </div>
-                <div class="half_inp">
-                    <select class="select" name="s_tower_build" id="s_tower_build">
-                        <option value="">Is it a tower building</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
+                <button class="page_main_btn lead_pri_btn" type="submit">Search</button>                
             </div>
-            <div class="pickup_details">
-                <h3 class="inp_sec_title">Dropoff Details</h3>
-                <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Type Your Address">
-                <div class="full_inp_sec gap_0">
-                    <div class="half_inp">
-                        <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Contact Name">
-                        <input type="email" name="sender_email" id="sender_email" class="page_inp" placeholder="Unit/Suite Number">
+            <div class="leads_section full_inp_sec">
+                <div class="lead_item half_inp" _uid="0" >
+                    <div class="inp_box">
+                        <input type="checkbox" name="" id="1" class="select"></input>
+                        <h2>$ 10</h2>
                     </div>
-                    <div class="half_inp">
-                        <input type="text" name="receiver_name" id="receiver_name" class="page_inp" placeholder="Contact Number">
-                        <input type="enail" name="receiver_email" id="receiver_email" class="page_inp" placeholder="Address Instruction">
+                    <div class="lead_content">
+                        <section>
+                            <h3>Loading and Unloading Help</h3>
+                            <div class="p_sec">
+                                <p><b>Truck : </b>22ft [ 8 Hours ]</p>
+                                <p><b>Workers Required : </b>6 [ 7 Hours ]</p>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Delivery Information</h3>
+                            <div class="p_sec">
+                                <p><b>Pickup Date / Time : </b>Apr 30, 2024 / 10:30</p>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Moving Information</h3>
+                            <div class="p_sec">
+                                <p><b>Building Type : </b>Office Building</p>
+                                <p><b>Type of Entrance : </b>Stairs 2nd Floor to Stairs 4rth Floor</p>
+                                <p><b>Area Size : </b>over 3500 sq. ft</p>
+                            </div>
+                        </section>
                     </div>
                 </div>
-                <div class="half_inp">
-                    <select class="select" name="s_tower_build" id="s_tower_build">
-                        <option value="">Is it a tower building</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-            </div>
-            <div class="pack_info">
-                <div class="ist_sec">
-                    <h3 class="inp_sec_title">Package Information</h3>
-                    <button id="add_package">
-                        <i class="bi bi-plus-lg"></i>
-                        Add Package
-                    </button>
-                </div>
-                <div id="package_sec">
-                    <div class="package_item full_inp_sec gap_0 " _uid="0">
-                        <select class="select package_type" name="package_type" id="package_type"></select>
-                        <select class="select package_quantity" name="package_quantity" id="package_quantity"></select>
+                <div class="lead_item half_inp" _uid="0" >
+                    <div class="inp_box">
+                        <input type="checkbox" name="" id="1" class="select"></input>
+                        <h2>$ 10</h2>
                     </div>
-                </div>                
-            </div>
-            <div class="full_inp_sec users_det">
-                <div class="half_inp insurance">
-                    <h3 class="inp_sec_title">Insurance</h3>
-                    <select class="select" name="ins_type" id="ins_type">
-                        <option value="">Select Insurance Type</option>
-                        <option value="envelope">No, I dont need insurance</option>
-                        <option value="100">Yes, $ 100 [  Pay $ 10  ]</option>
-                        <option value="150">Yes, $ 150 [  Pay $ 15  ]</option>
-                        <option value="small">Yes, $ 200 [  Pay $ 20  ]</option>
-                        <option value="small">Yes, $ 250 [  Pay $ 25  ]</option>
-                        <option value="small">Yes, $ 300 [  Pay $ 30  ]</option>
-                    </select>
+                    <div class="lead_content">
+                        <section>
+                            <h3>Loading and Unloading Help</h3>
+                            <div class="p_sec">
+                                <p><b>Truck : </b>22ft [ 8 Hours ]</p>
+                                <p><b>Workers Required : </b>6 [ 7 Hours ]</p>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Delivery Information</h3>
+                            <div class="p_sec">
+                                <p><b>Pickup Date / Time : </b>Apr 30, 2024 / 10:30</p>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Moving Information</h3>
+                            <div class="p_sec">
+                                <p><b>Building Type : </b>Office Building</p>
+                                <p><b>Type of Entrance : </b>Stairs 2nd Floor to Stairs 4rth Floor</p>
+                                <p><b>Area Size : </b>over 3500 sq. ft</p>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-                <div class="half_inp driver_tip">
-                    <h3 class="inp_sec_title">Driver Tip</h3>
-                    <input type="number" name="receiver_name" id="receiver_name" class="page_inp" placeholder="Enter a tip amount [ $0 to infinity ]">
+                <div class="lead_item half_inp" _uid="0" >
+                    <div class="inp_box">
+                        <input type="checkbox" name="" id="1" class="select"></input>
+                        <h2>$ 10</h2>
+                    </div>
+                    <div class="lead_content">
+                        <section>
+                            <h3>Loading and Unloading Help</h3>
+                            <div class="p_sec">
+                                <p><b>Truck : </b>22ft [ 8 Hours ]</p>
+                                <p><b>Workers Required : </b>6 [ 7 Hours ]</p>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Delivery Information</h3>
+                            <div class="p_sec">
+                                <p><b>Pickup Date / Time : </b>Apr 30, 2024 / 10:30</p>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Moving Information</h3>
+                            <div class="p_sec">
+                                <p><b>Building Type : </b>Office Building</p>
+                                <p><b>Type of Entrance : </b>Stairs 2nd Floor to Stairs 4rth Floor</p>
+                                <p><b>Area Size : </b>over 3500 sq. ft</p>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
-            <button class="page_main_btn" type="submit">Continue</button>
         </div>
     </div>
 
@@ -350,7 +377,6 @@
         </div>
     </footer>
 
-    <script src="../pages_funcion.js"></script>
     <script src="../../index.js"></script>
     
 </body>

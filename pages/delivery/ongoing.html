@@ -201,9 +201,9 @@
         <div class="slug">
             <a href="../../index.html" class="slug_item">Home</a>
             <span class="slug_item">></span>
-            <a href="#" class="slug_item">Now_Moving</a>
+            <a href="#" class="slug_item">Ongoing_Order</a>
         </div>
-        <h2 class="page_title">MOVING NOW <span id="moving_title"></span></h2>
+        <h2 class="page_title">ONGOING ORDER</h2>
     </div>
 
     <!-- Input Section -->
@@ -211,209 +211,117 @@
         <div class="right_inp_sec">
             <div class="half_inp">
                 <h3 class="inp_sec_title">Choose Booking Style</h3>
-                <select class="select" name="booking_type" id="booking_type">
+                <select class="select" name="ongoing_type" id="ongoing_type">
                     <option value="">Select</option>
-                    <option value="hourly">Hourly Booking</option>
-                    <option value="flat_rate">Flat Rate Booking</option>
-                    <option value="sp_artical">Spacial Articals</option>                    
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>                    
                 </select>
             </div>
-            <div id="booking_html">
+            <div class="ongoing_item" id="ongoing_daily">
+                <div class="full_inp_sec gap_0">
+                    <div class="half_inp">
+                        <h4>Starting Date</h4>
+                        <input type="date">
+                    </div>
+                    <div class="half_inp">
+                        <h4>Ending Date [Optional]</h4>
+                        <input type="date">
+                    </div>
+                </div>                
+            </div>
+            <div class="ongoing_item" id="ongoing_weekly">
+                <div class="full_inp_sec gap_0">
+                    <select class="select weekly_sel_inp" name="week_sunday" id="week_sunday">
+                        <option value="">Eveny Sunday Pickup Time</option>
+                    </select>
+                    <select class="select weekly_sel_inp" name="week_sunday" id="week_sunday">
+                        <option value="">Eveny Monday Pickup Time</option>
+                    </select>
+                    <select class="select weekly_sel_inp" name="week_sunday" id="week_sunday">
+                        <option value="">Eveny Tuesday Pickup Time</option>
+                    </select>
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <select class="select weekly_sel_inp" name="week_sunday" id="week_sunday">
+                        <option value="">Eveny Wednesday Pickup Time</option>
+                    </select>
+                    <select class="select weekly_sel_inp" name="week_sunday" id="week_sunday">
+                        <option value="">Eveny Thursday Pickup Time</option>
+                    </select>
+                    <select class="select weekly_sel_inp" name="week_sunday" id="week_sunday">
+                        <option value="">Eveny Friday Pickup Time</option>
+                    </select>
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <select class="select weekly_sel_inp" name="week_sunday" id="week_sunday">
+                        <option value="">Eveny Saturday Pickup Time</option>
+                    </select>
+                    <input type="text" style="background-color: #FFFFFF; border: none;" disabled>
+                    <input type="text" style="background-color: #FFFFFF; border: none;" disabled>
 
-                <div class="booking_item" id="truck_labors">
-                    <h3 class="inp_sec_title">Truck Size & Hours</h3>
-                    <div class="full_inp_sec gap_0">
-                        <select class="select" name="truck_size" id="truck_size">
-                            <option value="">Select</option>
-                            <option value="">10ft [ $5/Hour ]</option>
-                            <option value="">14ft [ $10/Hour ]</option>
-                            <option value="">20ft [ $15/Hour ]</option>
-                            <option value="">22ft [ $20/Hour ]</option>
-
-                        </select>
-                        <select class="select truck_time" name="truck_time" id="truck_time"></select>
-                    </div>
-                </div>
-                <div class="booking_item" id="labors_time">
-                    <h3 class="inp_sec_title">Labors & Hours</h3>
-                    <div class="full_inp_sec gap_0">
-                        <select class="select" name="labors_num" id="labors_num"></select>
-                        <select class="select" name="labor_time" id="labor_time"></select>
-                    </div>
-                </div>
-                <div class="booking_item" id="moving_info">
-                    <h3 class="inp_sec_title">Moving Informaion</h3>
-                    <div class="full_inp_sec gap_0">
-                        <select class="select" name="building_type" id="building_type">
-                            <option value="">Building Type</option>
-                            <option  value='12'>Apartment</option>
-                            <option  value='11'>Banglow</option>
-                            <option  value='9'>House</option>
-                            <option  value='14'>Industrial</option>
-                            <option  value='13'>Office Building</option>
-                            <option  value='15'>Shop</option>
-                            <option  value='16'>Storage</option>
-                            <option  value='10'>Townhouse</option>
-                        </select>
-                        <select class="select" name="type_of_entra_from" id="type_of_entra_from">
-                            <option value="">Type of Entrance [From]</option>
-                            <option  value='22'>Elevator</option>
-                            <option  value='17'>Ground Floor</option>
-                            <option  value='23'>Private House</option>
-                            <option  value='18'>Stairs 2nd Floor</option>
-                            <option  value='19'>Stairs 3rd Floor</option>
-                            <option  value='20'>Stairs 4rth Floor</option>
-                            <option  value='21'>Stairs 5th Floor</option>
-                        </select>
-                        <select class="select" name="type_of_entra_to" id="type_of_entra_to">
-                            <option value="">Type of Entrance [To]</option>
-                            <option  value='22'>Elevator</option>
-                            <option  value='17'>Ground Floor</option>
-                            <option  value='23'>Private House</option>
-                            <option  value='18'>Stairs 2nd Floor</option>
-                            <option  value='19'>Stairs 3rd Floor</option>
-                            <option  value='20'>Stairs 4rth Floor</option>
-                            <option  value='21'>Stairs 5th Floor</option>
-                        </select>
-                        <select class="select" name="time" id="time">
-                            <option value="">Area Size</option>
-                            <option  value='27'>1500-2500 sq. ft.</option>
-                            <option  value='28'>2500-3500 sq. ft.</option>
-                            <option  value='25'>600-800 sq. ft.</option>
-                            <option  value='26'>800-1500 sq. ft.</option>
-                            <option  value='24'>Less than 600 sq. ft.</option>
-                            <option  value='29'>over 3500 sq. ft.</option>
-                        </select>
-                    </div>
-                </div>
-                <di class="booking_item"v id="packing_services">
-                    <h3 class="inp_sec_title">Packing Service</h3>
-                    <div class="full_inp_sec gap_0">
-                        <div class="half_inp">
-                            <select class="select half_inp" name="package_ser_type" id="package_ser_type">
-                                <option value="">Select</option>
-                                <option value="labor_worker">Labors/Worker</option>
-                                <option value="moving_supply">Moving Supply</option>
-                                <option value="both">Both</option>
-                            </select>
-                        </div>
-                        <div id="pac_ser_type_extra" class="half_inp p_s_sec_select">
-                            <select class="select" name="for_pack_labor" id="for_pack_labor"></select>
-                            <select class="select for_pack_time" name="for_pack_time" id="for_pack_time"></select>
-                        </div>
-                    </div>
-                </di>
-                <div class="booking_item" id="spacial_artical">
-                    <h3 class="inp_sec_title">Spacial Articals</h3>
-                    <div class="sp_ar_item full_inp_sec gap_0">
-                        <div class="half_inp">
-                            <div class="subtitle_sec">
-                                <h5>Any item over 150 Lbs ($5/qty.)</h5>
-                                <div id="150_val">
-                                    $ 5
-                                </div>
-                            </div>
-                            <select class="select" name="item_150_lbs" id="item_150_lbs"></select>
-                        </div>
-                        <div class="half_inp">
-                            <div class="subtitle_sec">
-                                <h5>Baby Piano ($10/qty.)</h5>
-                                <div id="150_val">
-                                    $ 5
-                                </div>
-                            </div>
-                            <select class="select" name="item_150_lbs" id="item_150_lbs"></select>
-                        </div>
-                    </div>
-                    <div class="sp_ar_item full_inp_sec gap_0">
-                        <div class="half_inp">
-                            <div class="subtitle_sec">
-                                <h5>Double Door Fridge ($5/qty.)</h5>
-                                <div id="150_val">
-                                    $ 5
-                                </div>
-                            </div>
-                            <select class="select" name="item_150_lbs" id="item_150_lbs"></select>
-                        </div>
-                        <div class="half_inp">
-                            <div class="subtitle_sec">
-                                <h5>Grand Piano ($8/qty.)</h5>
-                                <div id="150_val">
-                                    $ 5
-                                </div>
-                            </div>
-                            <select class="select" name="item_150_lbs" id="item_150_lbs"></select>
-                        </div>
-                    </div>
-                    <div class="sp_ar_item full_inp_sec gap_0">
-                        <div class="half_inp">
-                            <div class="subtitle_sec">
-                                <h5>Heavy Gym Equipment ($20/qty.)</h5>
-                                <div id="150_val">
-                                    $ 5
-                                </div>
-                            </div>
-                            <select class="select" name="item_150_lbs" id="item_150_lbs"></select>
-                        </div>
-                        <div class="half_inp">
-                            <div class="subtitle_sec">
-                                <h5>Hot Tub ($5/qty.)</h5>
-                                <div id="150_val">
-                                    $ 5
-                                </div>
-                            </div>
-                            <select class="select" name="item_150_lbs" id="item_150_lbs"></select>
-                        </div>
-                    </div>
-                    <div class="sp_ar_item full_inp_sec gap_0">
-                        <div class="half_inp">
-                            <div class="subtitle_sec">
-                                <h5>Industrial Equipment ($15/qty.)</h5>
-                                <div id="150_val">
-                                    $ 5
-                                </div>
-                            </div>
-                            <select class="select" name="item_150_lbs" id="item_150_lbs"></select>
-                        </div>
-                        <div class="half_inp">
-                            <div class="subtitle_sec">
-                                <h5>Large Office Printer ($10/qty.)</h5>
-                                <div id="150_val">
-                                    $ 5
-                                </div>
-                            </div>
-                            <select class="select" name="item_150_lbs" id="item_150_lbs"></select>
-                        </div>
-                    </div>
-                    <div class="sp_ar_item full_inp_sec gap_0">
-                        <div class="half_inp">
-                            <div class="subtitle_sec">
-                                <h5>Pool Table ($10/qty.)</h5>
-                                <div id="150_val">
-                                    $ 5
-                                </div>
-                            </div>
-                            <select class="select" name="item_150_lbs" id="item_150_lbs"></select>
-                        </div>
-                        <div class="half_inp">
-                            <div class="subtitle_sec">
-                                <h5>Upright Piano ($15/qty.)</h5>
-                                <div id="150_val">
-                                    $ 5
-                                </div>
-                            </div>
-                            <select class="select" name="item_150_lbs" id="item_150_lbs"></select>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <div class="moving_op">
-                <div class="date&time">
-                    <h3 class="inp_sec_title">Moving Information</h3>
-                    <div class="full_inp_sec gap_0">
-                        <input type="date" name="dare" id="dare">
-                        <select class="select" name="moving_time" id="moving_time"></select>
+            <div class="ongoing_item" id="ongoing_monthly">
+                <div class="ist_sec">
+                    <h3 class="inp_sec_title">Schedule every month</h3>
+                    <div>
+                        <a href="javascript:void(0);" onclick=`` style="background-color:#333333; color:#FFFFFF; padding:4px; margin-top:4px; margin-bottom:4px; font-size:13px;">Select all</a>
+                        <a href="javascript:void(0);" onclick="javascript:$('#og_exp_holidays option').prop('selected',false);" style="background-color:#333333; color:#FFFFFF; padding:4px; margin-top:4px; margin-bottom:4px;  font-size:13px;">Deselect all</a>
                     </div>
+                </div>
+                <div class="check_inp_sec"></div>
+            </div>
+
+            <div class="full_inp_sec" id="exception">
+                <div class="exception half_inp">
+                    <div class="ist_sec">
+                        <h3 class="inp_sec_title">Exception</h3>
+                        <button id="add_exc_inp">
+                            <i class="bi bi-plus-lg"></i>
+                            Add More
+                        </button>
+                    </div>
+                    <div id="exception_inputs">
+                        <div class="exc_item" _uid='0'>
+                            <input type="date" name="exception_inp">
+                            <button class="side_delete_btn" onclick="delete_exc_inp(0)"><i class="bi bi-trash"></i></button>
+                        </div>
+                    </div>                
+                </div>
+                <div class="half_inp outgroup_sec">
+                    <div class="">
+                        <h3 class="inp_sec_title">Holidays</h3>
+                        <select class="form-control" id="og_exp_holidays" name="og_exp_holidays[]" multiple="multiple" style="height:170px!important;">
+                            <optgroup>
+                                <option value="1" >New Year Day - (1st January)</option>
+                                <option value="2" >Civic Holiday -- (5th August)</option>
+                                <option value="3" >Canada Day -- (1st July)</option>
+                                <option value="4" >Good Friday -- (29th March)</option>
+                                <option value="5" >Labour Day -- (2nd September)</option>
+                            </optgroup>
+                        </select>
+                        <a href="javascript:void(0);" onclick=`` style="background-color:#333333; color:#FFFFFF; padding:4px; margin-top:4px; margin-bottom:4px; font-size:13px;">Select all</a>
+                        <a href="javascript:void(0);" onclick="javascript:$('#og_exp_holidays option').prop('selected',false);" style="background-color:#333333; color:#FFFFFF; padding:4px; margin-top:4px; margin-bottom:4px;  font-size:13px;">Deselect all</a>
+                        <br clear="all" /><br clear="all" />
+                    </div>
+                    <div class="">
+                        <h3 class="inp_sec_title">Other Days</h3>
+                        <select class="form-control" id="og_exp_days" name="og_exp_days[]" multiple="multiple" style="height:170px!important;">
+                            <optgroup>
+                                <option value="Sunday" >Sunday</option>
+                                <option value="Monday" >Monday</option>
+                                <option value="Tuesday" >Tuesday</option>
+                                <option value="Wednesday" >Wednesday</option>
+                                <option value="Thursday" >Thursday</option>
+                                <option value="Friday" >Friday</option>
+                                <option value="Satruday" >Saturday</option>
+                            </optgroup>
+                        </select>
+                        <a href="javascript:void(0);" onclick="javascript:$('#og_exp_days option').prop('selected',true);" style="background-color:#333333; color:#FFFFFF; padding:5px; margin-top:4px; margin-bottom:4px; font-size:13px;">Select all</a>
+                        <a href="javascript:void(0);" onclick="javascript:$('#og_exp_days option').prop('selected',false);" style="background-color:#333333; color:#FFFFFF; padding:5px; margin-top:4px; margin-bottom:4px;  font-size:13px;">Deselect all</a>
+                        <br clear="all" /><br clear="all" />
+                        </div>
                 </div>
             </div>
             <div class="pickup_details">
@@ -424,7 +332,14 @@
                     <input type="text" class="page_inp" placeholder="Unit/Suite Number">
                     <input type="text" class="page_inp" placeholder="Contact Number">
                 </div>
-                <input type="text" class="page_inp" placeholder="Address Instruction">
+                <div class="full_inp_sec gap_0">
+                    <input type="text" class="page_inp" placeholder="Address Instruction">
+                    <select class="select" name="s_tower_build" id="s_tower_build">
+                        <option value="">Is it a tower building</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>                
             </div>
             <div class="pickup_details">
                 <h3 class="inp_sec_title">Dropoff Details</h3>
@@ -434,7 +349,29 @@
                     <input type="text" class="page_inp" placeholder="Unit/Suite Number">
                     <input type="text" class="page_inp" placeholder="Contact Number">
                 </div>
-                <input type="text" class="page_inp" placeholder="Address Instruction">
+                <div class="full_inp_sec gap_0">
+                    <input type="text" class="page_inp" placeholder="Address Instruction">
+                    <select class="select" name="s_tower_build" id="s_tower_build">
+                        <option value="">Is it a tower building</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div> 
+            </div>
+            <div class="pack_info">
+                <div class="ist_sec">
+                    <h3 class="inp_sec_title">Package Information</h3>
+                    <button id="add_package">
+                        <i class="bi bi-plus-lg"></i>
+                        Add Package
+                    </button>
+                </div>
+                <div id="package_sec">
+                    <div class="package_item full_inp_sec gap_0 " _uid="0">
+                        <select class="select package_type" name="package_type" id="package_type"></select>
+                        <select class="select package_quantity" name="package_quantity" id="package_quantity"></select>
+                    </div>
+                </div>                
             </div>
             <div class="full_inp_sec users_det">
                 <div class="half_inp insurance">
@@ -446,17 +383,18 @@
                     <input type="number" name="receiver_name" id="receiver_name" class="page_inp" placeholder="Enter a tip amount [ $0 to infinity ]">
                 </div>
             </div>
-            <div class="your_contact">
-                <h3 class="inp_sec_title">Your Contact</h3>
-                <div class="full_inp_sec gap_0">
-                    <input type="text" placeholder="Your Name">
-                    <input type="text" placeholder="Email Address">
-                    <input type="text" placeholder="Contact Number">
-                </div>
-                <div class="full_inp_sec gap_0">
-                    <input type="text" placeholder="Write Note">
+            <div class="full_inp_sec users_det">
+                <div class="half_inp insurance">
+                    <h3 class="inp_sec_title">Payment</h3>
+                    <select class="select" name="payment_type" id="payment_type">
+                        <option value="">Select</option>
+                        <option value="per_order">Per Order</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
                 </div>
             </div>
+
             <button class="page_main_btn" type="submit">Continue</button>
         </div>
     </div>
@@ -514,7 +452,8 @@
         </div>
     </footer>
 
-    <script src="./now.js"></script>
+    <script src="./ongoing.js"></script>
+    <script src="../pages_funcion.js"></script>
     <script src="../../index.js"></script>
     
 </body>

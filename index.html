@@ -34,11 +34,11 @@
                 <ul id="delivery_list">
                     <li><a href="./pages/delivery/now.html">Now</a></li>
                     <li><a href="./pages/delivery/schedule.html">Schedule</a></li>
-                    <li><a href="#">Ongoing</a></li>
+                    <li><a href="./pages/delivery/ongoing.html">Ongoing</a></li>
                     <li><a href="./pages/delivery/sameday.html">Same Day</a></li>
                     <li><a href="#">Multi Order - Same Pickup</a></li>
                     <li><a href="#">Multi Order - Same Dropoff</a></li>
-                    <li><a href="">Interactive Delivery</a></li>
+                    <li><a href="./pages/delivery/interactive.html">Interactive Delivery</a></li>
                 </ul>
             </li>            
             <li class="sidebar_item">
@@ -90,7 +90,7 @@
                     <i class="bi bi-chevron-down"></i>
                 </div>
                 <ul id="quote_list">
-                    <li><a href="#">Delivery</a></li>
+                    <li><a href="./pages/quote_rate/delivery/index.html">Delivery</a></li>
                     <li><a href="#">Interactive Delivery</a></li>
                     <li><a href="#">Moving</a></li> 
                     <li><a href="#">Storage</a></li> 
@@ -104,11 +104,9 @@
                     <i class="bi bi-chevron-down"></i>
                 </div>
                 <ul id="lead_net_list">
-                    <li><a href="#">Delivery</a></li>
-                    <li><a href="#">Interactive Delivery</a></li>
-                    <li><a href="#">Moving</a></li> 
-                    <li><a href="#">Storage</a></li> 
-                    <li><a href="#">Ship</a></li> 
+                    <li><a href="./pages/lead/moving.html">Moving</a></li> 
+                    <li><a href="./pages/lead/storage.html">Storage</a></li> 
+                    <li><a href="./pages/lead/ship.html">Ship</a></li> 
                 </ul>
             </li>
         </ul>
@@ -170,20 +168,32 @@
             </a>
         </div>
         <div class="right_header flex_align">
-            <select name="country" id="country">
-                <option value="can">Toronto</option>
-            </select>
-            <select name="currency" id="currency">
-                <option value="CAD">CAD</option>
-                <option value="USD">USD</option>
-            </select>
-            <button class="btn_sec">
-                Help
-            </button>
+            <div class="select_box">
+                <select name="country" id="country">
+                    <option value="can">Toronto</option>
+                </select>   
+                <div class="icon_container">
+                    <i class="bi bi-chevron-down"></i>
+                </div>             
+            </div>
+            <div class="select_box">
+                <select name="currency" id="currency">
+                    <option value="CAD">CAD</option>
+                    <option value="USD">USD</option>
+                </select>                
+                <div class="icon_container">
+                    <i class="bi bi-chevron-down"></i>
+                </div> 
+            </div>          
+            <a href="./pages/contact.html">
+                <button class="btn_pri">
+                    Help
+                </button>
+            </a>            
             <button class="btn_pri" id="login_btn">
                 Login
             </button>
-            <button class="btn_pri" id="local_time"></button>  
+            <button class="btn_sec" id="local_time"></button>  
         </div>
     </header>
 
@@ -271,8 +281,8 @@
             <div class="foot_item">
                 <h4>Helpful Links</h4>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="./pages/about.html">About Us</a></li>
+                    <li><a href="./pages/contact.html">Contact Us</a></li>
                     <li><a href="#">FAQs</a></li>
                     <li><a href="#">Tearms</a></li>
                 </ul>
@@ -280,9 +290,9 @@
             <div class="foot_item">
                 <h4>Account Links</h4>
                 <ul>
-                    <li><a href="#">Customer</a></li>
-                    <li><a href="#">Driver</a></li>
-                    <li><a href="#">Corporate</a></li>
+                    <li><a href="./pages/customer.html">Customer</a></li>
+                    <li><a href="./pages/driver.html">Driver</a></li>
+                    <li><a href="./pages/corporate.html">Corporate</a></li>
                 </ul>
             </div>
             <div class="foot_item newslatter">

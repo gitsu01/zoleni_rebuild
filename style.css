@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Lilita+One&display=swap');
 
 :root {
-    --primary-color: #F40D15;
+    /* --primary-color: #F40D15; */
+    --primary-color-1: #C40C0C;
+    --primary-color: #FF6500;
+
+    /* C40C0C */
     --light-primary-color: #D4E7C5;
     --dark-primary-color: #222831;
     --hover-color: #615EFC;
@@ -56,18 +60,58 @@ button{
     font-size: 16px;
     font-weight: 600;
     border-radius: 20px !important;
+    /* background-color: var(--primary-color); */
 }
 
-.right_header select
-{
-    outline: none;
-    border: none;
-    border: .5px solid var(--dark-primary-color);
-    height: 42px;
-    padding: 0 18px;
-    font-size: 15px;
-    border-radius: 20px !important;
+.right_header .select_box{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 38px;
+    border-radius: 21px;
+    overflow: hidden;
+    border-radius: 7px;
+    border: 1px solid var(--primary-color);
 }
+.right_header .select_box select{
+    appearance: none;
+    border: none;
+    outline: none;
+    font-size: 16px; 
+    padding: 0 70px 0 15px;
+    width: 100%;
+    color: var(--dark-primary-color);
+    
+    /* background-color: #2873ff; */
+    /* background-color: #FF8A08; */
+    /* background-color: #652919; */
+
+}
+
+.select_box .icon_container{
+    width: 42px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    /* background-color: #FF6500; */
+    background-color: var();
+
+    
+}
+
+.select_box .icon_container i{
+    color: whitesmoke;
+}
+
+.right_header .select_box select option{
+    border-radius: 0px !important;
+    padding: 5px 0;
+}
+
 
 .btn_pri{
     background-color: var(--primary-color);
@@ -76,8 +120,8 @@ button{
 }
 
 .btn_sec {
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    color: var(--dark-primary-color);
+    border: 1px solid var(--dark-primary-color);
     box-shadow: var(--shadow-thin);
     background: transparent;
 }
@@ -87,6 +131,10 @@ button{
     color: var(--primary-color);
     font-size: 20px;
     height: 20px;
+}
+
+#local_time{
+    border-radius: 7px !important;
 }
 
 /* Scrollbar */
@@ -291,6 +339,7 @@ h1{
     width: 69%;
     background-color: #FFF5E0;
 }
+
 
 .newslatter_box button{
     width: 30% !important;
@@ -629,9 +678,7 @@ footer li{
 
 }
 
-
-
-
-
-
+.about_sec .left_inp_sec{
+    margin-bottom: 20px;
+}
 
