@@ -1,0 +1,153 @@
+.header{
+    position: sticky !important;
+    top: 0;
+}
+.side_filters{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    padding: 70px 0;
+    overflow-y: auto;
+}
+
+.side_filter_title{
+    padding: 20px 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ededed;
+}
+
+.sub_menu_title{
+    font-size: 20px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-weight: 400;
+
+}
+.filter ul{
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.filter ul li{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: 7px;
+}
+
+.filter ul li label{
+    font-size: 16px;
+}
+
+.filter{
+    padding: 25px 0;
+    border-bottom: 1px solid #ededed;
+}
+.filter.f_last{
+    border: none;
+}
+
+/* Category */
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.category{
+    position: relative;
+    width: auto;
+    height: 42px;
+    border-radius: 21px;
+    overflow: hidden;    
+}
+
+.category input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 42px !important;
+    width: 100% !important;
+    appearance: none;
+    background-color: #ededed;
+    transition: all 0.3s ease-in-out;
+}
+
+.category input:checked,
+.f_option input:checked{
+    background-color: #89b2ff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.category label{
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.category,
+.category *{
+    cursor: pointer;
+}
+
+/* Others Filters */
+.flex_g2{
+    display: flex;
+    gap: 22px;
+}
+
+.f_option input{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #ededed;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* niddle container */
+.middle_container{
+    margin: 0 380px 0 280px;
+    padding: 40px;
+}
+.middle_container .search_sec{
+    width: 100%;
+    display: flex;
+    gap: 13px;
+}
+.search_sec input{
+    width: 100%;
+    max-width: 400px;
+    height: 42px;
+    outline: none;
+    border: 1px solid #ededed;
+    border-radius: 21px;
+    padding: 0 20px;
+}
+
+.middle_container .sub_menu_title{
+    padding-left: 0;
+}
+
+
+
+
+
+/* map_container */
+.map_container{
+    position: fixed;
+    top: 70px;
+    right: 0px;
+    width: 380px;
+    height: 100%;
+    background-color: aqua;
+    box-shadow: inset 2px 5px 5px rgba(0, 0, 0, 0.1);
+}
