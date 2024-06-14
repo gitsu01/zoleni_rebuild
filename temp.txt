@@ -43,3 +43,43 @@
 .th_item:hover i{
     color: var(--hover-color);
 }
+
+
+
+
+<div class="pickup_details">
+                <h3 class="inp_sec_title">Dropoff Details</h3>
+                <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Type Your Address">
+                <div class="full_inp_sec gap_0">
+                    <div class="half_inp">
+                        <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Contact Name">
+                        <input type="email" name="sender_email" id="sender_email" class="page_inp" placeholder="Unit/Suite Number">
+                    </div>
+                    <div class="half_inp">
+                        <input type="text" name="receiver_name" id="receiver_name" class="page_inp" placeholder="Contact Number">
+                        <input type="enail" name="receiver_email" id="receiver_email" class="page_inp" placeholder="Address Instruction">
+                    </div>
+                </div>
+                <div class="half_inp">
+                    <select class="select" name="s_tower_build" id="s_tower_build">
+                        <option value="">Is it a tower building</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="pack_info">
+                <div class="ist_sec">
+                    <h3 class="inp_sec_title">Package Information</h3>
+                    <button id="add_package">
+                        <i class="bi bi-plus-lg"></i>
+                        Add Package
+                    </button>
+                </div>
+                <div id="package_sec">
+                    <div class="package_item full_inp_sec gap_0 " _uid="0">
+                        <select class="select package_type" name="package_type" id="package_type"></select>
+                        <select class="select package_quantity" name="package_quantity" id="package_quantity"></select>
+                    </div>
+                </div>                
+            </div>

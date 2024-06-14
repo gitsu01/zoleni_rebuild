@@ -13,13 +13,13 @@
     <div class="sidebar" id="sidebar">
         <div class="top_sidebar flex_align">
             <a href="../../../index.html">
-                <img src="../../../images/zoleni_logo.png" alt="#" height="40px">
+                <img src="../../../images/zoleni_logo.png" alt="#">
             </a>
             <i class="bi bi-x-lg"  id="close_menu"></i>
         </div>
         <ul class="middle_sidebar">
             <li class="sidebar_item">
-                <a href="../concierge.html" class="flex_align">
+                <a href="../../concierge.html" class="flex_align">
                     <img src="../../../images/icons/Front_Desk.svg" alt="Home">
                     Concierge
                 </a>
@@ -35,8 +35,8 @@
                     <li><a href="../../delivery/schedule.html">Schedule</a></li>
                     <li><a href="../../delivery/ongoing.html">Ongoing</a></li>
                     <li><a href="../../delivery/sameday.html">Same Day</a></li>
-                    <li><a href="#">Multi Order - Same Pickup</a></li>
-                    <li><a href="#">Multi Order - Same Dropoff</a></li>
+                    <li><a href="../../delivery/same_pickup.html">Multi Order - Same Pickup</a></li>
+                    <li><a href="../../delivery/same_dropoff.html">Multi Order - Same Dropoff</a></li>
                     <li><a href="../../delivery/interactive.html">Interactive Delivery</a></li>
                 </ul>
             </li>            
@@ -48,7 +48,7 @@
                 </div>
                 <ul id="moving_list">
                     <li><a href="../../moving/now.html">Booking Now</a></li>
-                    <li><a href="../../../business_directory.html">Business Directory</a></li> 
+                    <li><a href="#">Business Directory</a></li> 
                 </ul>
             </li>
             <li class="sidebar_item">
@@ -90,7 +90,7 @@
                 </div>
                 <ul id="quote_list">
                     <li><a href="./index.html">Delivery</a></li>
-                    <li><a href="./interactive.html">Interactive Delivery</a></li>
+                    <li><a href="#">Interactive Delivery</a></li>
                     <li><a href="#">Moving</a></li> 
                     <li><a href="#">Storage</a></li> 
                     <li><a href="#">Ship</a></li> 
@@ -111,7 +111,7 @@
         </ul>
         <div class="bottom_sidebar flex_align">
             <a href="../../contact.html">
-                <button class="btn_sec">
+                <button class="btn_pri">
                     <i class="bi bi-question"></i>
                     Help
                 </button>
@@ -161,10 +161,10 @@
     <!-- Header -->
     <header class="container header flex_align">
         <div class="left_header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" id="open_menu" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" id="open_menu" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg>
-            <a id="main_logo" href="../../index.html">
+            <a id="main_logo" href="../../../index.html">
                 <img src="../../../images/zoleni_logo.png" alt="zoleni.com">
             </a>
         </div>
@@ -218,8 +218,10 @@
                     <option value="now">Now</option>
                     <option value="schedule">Schedule</option>
                     <option value="sameday">Sameday</option>
-                    <option value="ongoing">Ongoing</option>                    
-                    <option value="inter">Interactive</option>                     
+                    <option selected value="ongoing">Ongoing</option>                    
+                    <option value="inter">Interactive</option>   
+                    <option value="same_pickup">Multi Order - Same Pickup</option>                     
+                    <option value="same_dropoff">Multi Order - Same Dropoff</option>                      
                 </select>
             </div>
             <div class="half_inp">

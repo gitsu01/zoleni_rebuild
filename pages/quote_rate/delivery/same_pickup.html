@@ -143,16 +143,16 @@
             <h2>Sign Up With</h2>
             <div class="logos flex_align">
                 <a href="#">
-                    <img src="../../../images/icons/Google.svg" alt="google">
+                    <img src="../images/icons/Google.svg" alt="google">
                 </a>
                 <a href="#">
-                    <img src="../../../images/icons/Facebook.svg" alt="google">
+                    <img src="../images/icons/Facebook.svg" alt="google">
                 </a>
                 <a href="#">
-                    <img src="../../../images/icons/Apple Logo.svg" alt="google">
+                    <img src="../images/icons/Apple Logo.svg" alt="google">
                 </a>
                 <a href="#">
-                    <img src="../../../images/icons/Amazon.svg" alt="google">
+                    <img src="../images/icons/Amazon.svg" alt="google">
                 </a>
             </div>
         </div>
@@ -201,11 +201,11 @@
     <!-- Title Section-->
     <div class="container page_title_sec">
         <div class="slug">
-            <a href="../../index.html" class="slug_item">Home</a>
+            <a href="../index.html" class="slug_item">Home</a>
             <span class="slug_item">></span>
             <a href="#" class="slug_item">Schedule_Delivery</a>
         </div>
-        <h2 class="page_title">SCHEDULE DELIVERY</h2>
+        <h2 class="page_title">MULTI DROPOFF DELIVERY</h2>
     </div>
 
     <!-- Input Section -->
@@ -216,11 +216,11 @@
                 <select class="select" name="quote_delivery" id="quote_delivery" onchange="func_del_mal(this)">
                     <option value="">Select</option>
                     <option value="now">Now</option>
-                    <option selected value="schedule">Schedule</option>
+                    <option value="schedule">Schedule</option>
                     <option value="sameday">Sameday</option>
                     <option value="ongoing">Ongoing</option>                    
                     <option value="inter">Interactive</option>   
-                    <option value="same_pickup">Multi Order - Same Pickup</option>                     
+                    <option selected value="same_pickup">Multi Order - Same Pickup</option>                     
                     <option value="same_dropoff">Multi Order - Same Dropoff</option>                    
                 </select>
             </div>
@@ -230,6 +230,15 @@
                     <input type="date" name="dare" id="dare">
                     <select class="select" name="package_type" id="package_type">
                         <option value="">Time</option>
+                        <option value="envelope">00:00</option>
+                        <option value="envelope">00:15</option>
+                        <option value="envelope">00:30</option>
+                        <option value="envelope">00:45</option>
+                        <option value="envelope">01:00</option>
+                        <option value="envelope">01:15</option>
+                        <option value="envelope">01:30</option>
+                        <option value="envelope">01:45</option>
+                        <option value="envelope">02:00</option>
                     </select>
                 </div>
             </div>
@@ -253,56 +262,12 @@
                         <option value="no">No</option>
                     </select>
                 </div>
-            </div>
-            <div class="pickup_details">
+            </div> 
+            <div class="dropoff_details multi_pd">
                 <h3 class="inp_sec_title">Dropoff Details</h3>
-                <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Type Your Address">
-                <div class="full_inp_sec gap_0">
-                    <div class="half_inp">
-                        <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Contact Name">
-                        <input type="email" name="sender_email" id="sender_email" class="page_inp" placeholder="Unit/Suite Number">
-                    </div>
-                    <div class="half_inp">
-                        <input type="text" name="receiver_name" id="receiver_name" class="page_inp" placeholder="Contact Number">
-                        <input type="enail" name="receiver_email" id="receiver_email" class="page_inp" placeholder="Address Instruction">
-                    </div>
-                </div>
-                <div class="half_inp">
-                    <select class="select" name="s_tower_build" id="s_tower_build">
-                        <option value="">Is it a tower building</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-            </div>
-            <div class="pack_info">
-                <div class="ist_sec">
-                    <h3 class="inp_sec_title">Package Information</h3>
-                    <button id="add_package">
-                        <i class="bi bi-plus-lg"></i>
-                        Add Package
-                    </button>
-                </div>
-                <div id="package_sec">
-                    <div class="package_item full_inp_sec gap_0 " _uid="0">
-                        <select class="select package_type" name="package_type" id="package_type"></select>
-                        <select class="select package_quantity" name="package_quantity" id="package_quantity"></select>
-                    </div>
-                </div>                
-            </div>
+                <button class="btn_sec" onclick="func_add_dropoff()">Add Dropoff Location</button>
+            </div>            
             <div class="full_inp_sec users_det">
-                <div class="half_inp insurance">
-                    <h3 class="inp_sec_title">Insurance</h3>
-                    <select class="select" name="ins_type" id="ins_type">
-                        <option value="">Select Insurance Type</option>
-                        <option value="envelope">No, I dont need insurance</option>
-                        <option value="100">Yes, $ 100 [  Pay $ 10  ]</option>
-                        <option value="150">Yes, $ 150 [  Pay $ 15  ]</option>
-                        <option value="small">Yes, $ 200 [  Pay $ 20  ]</option>
-                        <option value="small">Yes, $ 250 [  Pay $ 25  ]</option>
-                        <option value="small">Yes, $ 300 [  Pay $ 30  ]</option>
-                    </select>
-                </div>
                 <div class="half_inp driver_tip">
                     <h3 class="inp_sec_title">Driver Tip</h3>
                     <input type="number" name="receiver_name" id="receiver_name" class="page_inp" placeholder="Enter a tip amount [ $0 to infinity ]">

@@ -191,4 +191,10 @@ function func_del_mal(item){
     if(item.value == 'inter'){
         window.location.replace(`${link}/pages/quote_rate/delivery/interactive.html`)
     }
+    if(item.value == 'same_pickup'){
+        window.location.replace(`${link}/pages/quote_rate/delivery/same_pickup.html`)
+    }
+    if(item.value == 'same_dropoff'){
+        window.location.replace(`${link}/pages/quote_rate/delivery/same_dropoff.html`)
+    }
 }
