@@ -59,13 +59,13 @@
 .categories{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 .category{
     position: relative;
     width: auto;
-    height: 42px;
-    border-radius: 21px;
+    height: 36px;
+    border-radius: 18px;
     overflow: hidden;    
 }
 
@@ -73,7 +73,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 42px !important;
+    height: 36px !important;
     width: 100% !important;
     appearance: none;
     background-color: #ededed;
@@ -88,7 +88,7 @@
 
 .category label{
     z-index: 1;
-    padding: 0 20px;
+    padding: 0 18px;
 }
 
 .category,
@@ -99,13 +99,13 @@
 /* Others Filters */
 .flex_g2{
     display: flex;
-    gap: 22px;
+    gap: 20px;
 }
 
 .f_option input{
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     border: 1px solid #ededed;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
