@@ -1,12 +1,13 @@
 .header{
     position: sticky !important;
     top: 0;
+    padding: 0 20px !important;
 }
 .side_filters{
     position: fixed;
-    top: 70px;
+    top: 60px;
     left: 0;
-    width: 260px;
+    width: 250px;
     height: 100%;
     z-index: 1;
     background-color: #fff;
@@ -16,17 +17,17 @@
 }
 
 .side_filter_title{
-    padding: 20px 30px;
+    padding: 20px ;
     font-size: 24px;
     text-transform: uppercase;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #cecece;
 }
 
 .sub_menu_title{
-    font-size: 20px;
-    padding-left: 30px;
-    margin-bottom: 15px;
-    font-weight: 400;
+    font-size: 16px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
 
 }
 .filter ul{
@@ -48,8 +49,8 @@
 }
 
 .filter{
-    padding: 25px 0;
-    border-bottom: 1px solid #ededed;
+    padding: 15px 0;
+    border-bottom: 1px solid #dbdbdb;
 }
 .filter.f_last{
     border: none;
@@ -64,8 +65,8 @@
 .category{
     position: relative;
     width: auto;
-    height: 36px;
-    border-radius: 18px;
+    height: 32px;
+    border-radius: 16px;
     overflow: hidden;    
 }
 
@@ -73,7 +74,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 36px !important;
+    height: 32px !important;
     width: 100% !important;
     appearance: none;
     background-color: #ededed;
@@ -104,8 +105,8 @@
 
 .f_option input{
     appearance: none;
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     border: 1px solid #bbb7b7;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -115,7 +116,7 @@
 
 /* niddle container */
 .middle_container{
-    margin: 0 380px 0 260px;
+    margin: 0 320px 0 250px;
     padding: 30px;
 }
 .middle_container .search_sec{
@@ -157,6 +158,8 @@
 
 .m_card img{
     border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .m_card h3{
@@ -205,9 +208,13 @@
 }
 
 .m_fil_btn{
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 15px;
     padding: 20px 0;
+}
+
+.m_fil_btn button{
+    width: fit-content;
 }
 
 .m_filters{
@@ -242,9 +249,9 @@
 /* map_container */
 .map_container{
     position: fixed;
-    top: 70px;
+    top: 60px;
     right: 0px;
-    width: 380px;
+    width: 320px;
     height: calc(100% - 70px);
     background-color: lightgray;
     box-shadow: inset 2px 5px 5px rgba(0, 0, 0, 0.1);
