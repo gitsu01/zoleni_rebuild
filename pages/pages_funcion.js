@@ -95,24 +95,32 @@ let delivery_act_inp = document.getElementById('delivery_act_inp');
 
 if(add_delivery_act){
     add_delivery_act.addEventListener('click', () => {
-        let ran_num = Math.floor(Math.random() * 1000000);
+        let ran_id = Math.floor(Math.random() * 1000000);
         let d_elm = document.createElement('div');
         d_elm.classList.add('full_inp_sec','gap_0');
+        d_elm.setAttribute('id', ran_id);
 
         d_elm.innerHTML = `
-            <select _uid="${ran_num}" class="select data_item" name="da_item" id="da_item" onchange="func_data_ref(this)">
+            <select _uid="${ran_id}" class="select data_item" name="da_item" id="da_item" onchange="func_data_ref(this)">
                 <option value="">Select</option>
                 <option value="dancer">Dancer</option>
                 <option value="singer">Singer</option>
             </select>
-            <select ref="${ran_num}" class="select data_ref">
+            <select ref="${ran_id}" class="select data_ref">
                 <option value="">Choose Performer</option>
             </select>
+            <button class="side_delete_btn" onclick="delete_del_act(${ran_id})"><i class="bi bi-trash"></i></button>
         `;
 
         delivery_act_inp.appendChild(d_elm);
 
     })
+}
+
+// Delete Delivery Act
+function delete_del_act(_id) {
+    let del_it = document.getElementById(_id);
+    delivery_act_inp.removeChild(del_it);
 }
   
 

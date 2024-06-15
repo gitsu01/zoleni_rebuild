@@ -355,13 +355,19 @@
         }
 
         function add_shiping_item() {
+            let random = Math.floor(Math.random() * 1000000);
             let shiping_item = document.getElementById('shiping_item');
             let ship_item = document.querySelectorAll('.ship_item');
             
             let elm = document.createElement('div');
             elm.setAttribute('class', 'ship_item');
+            elm.setAttribute('id', random);
+
             let in_html = `
-                <h3 class="inp_sec_title">${ship_item.length+1}.</h3>
+                <div class="ist_sec">
+                    <h3 class="inp_sec_title">${ship_item.length+1}.</h3>
+                    <button class="side_delete_btn" onclick="delete_ship_item(${random})"><i class="bi bi-trash"></i></button>
+                </div>
                 <div class="full_inp_sec gap_0">
                     <input type="text" placeholder="Item Description">
                     <select class="select shipping_items" name="shipping_items" id="shipping_items">
@@ -387,6 +393,10 @@
 
         window.onload = add_shiping_item();
 
+        function delete_ship_item(_id) {
+            let del_item = document.getElementById(_id);
+            del_item.remove();
+        }
 
         // qm_articles
         let qs_ship_services = document.getElementById('qs_ship_services');

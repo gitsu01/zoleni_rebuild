@@ -44,3 +44,17 @@ setInterval(() => {
     show_time.innerText = time_now;
 },1000)
 
+// City Dropdown
+let cur_options = document.querySelector('.cur_options');
+function show_cur(item) {
+    cur_options.classList.toggle('show');
+}
+
+let cur_item = document.querySelectorAll('.cur_option');
+cur_item.forEach((it) => {
+    it.addEventListener('click', () => {
+        document.querySelector('.selCurTxt').innerText = it.innerText;
+        cur_options.classList.toggle('show');
+
+    })
+})

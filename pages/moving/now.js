@@ -134,12 +134,18 @@ booking_type.addEventListener('change', () => {
         moving_title.innerText = '[ HOURLY ]';
     }
     if (booking_type.value == 'flat_rate') {
+        booking_items[0].classList.remove('show');
+        booking_items[1].classList.remove('show');
         booking_items[2].classList.add('show');
         booking_items[3].classList.add('show');
         booking_items[4].classList.add('show');
         moving_title.innerText = '[ FLAT RATE ]';
     }
     if (booking_type.value == 'sp_artical') {
+        booking_items[0].classList.remove('show');
+        booking_items[1].classList.remove('show');
+        booking_items[2].classList.remove('show');
+        booking_items[3].classList.remove('show');
         booking_items[4].classList.add('show');
         moving_title.innerText = '[ SPACIAL ARTICAL ]';
     }
