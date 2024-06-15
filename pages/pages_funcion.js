@@ -1,7 +1,7 @@
 
 
 // Insurance
-let ins_type = document.getElementById('ins_type');
+let ins_type = document.getElementsByName('ins_type');
 let ins_list = `
     <option value="">Select Insurance Type</option>
     <option value="envelope">No, I dont need insurance</option>
@@ -15,7 +15,10 @@ while (i <= 100) {
     i += 5;
 }
 
-ins_type.innerHTML = ins_list;
+ins_type.forEach((item) => {
+    item.innerHTML = ins_list;
+})
+
 
 // Package
 let package_quantity = document.querySelectorAll('.package_quantity');

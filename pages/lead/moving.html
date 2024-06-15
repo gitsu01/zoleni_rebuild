@@ -91,9 +91,9 @@
                 <ul id="quote_list">
                     <li><a href="../quote_rate/delivery/index.html">Delivery</a></li>
                     <li><a href="../quote_rate/delivery/interactive.html">Interactive Delivery</a></li>
-                    <li><a href="#">Moving</a></li> 
-                    <li><a href="#">Storage</a></li> 
-                    <li><a href="#">Ship</a></li> 
+                    <li><a href="../quote_rate/moving.html">Moving</a></li> 
+                    <li><a href="../quote_rate/storage.html">Storage</a></li> 
+                    <li><a href="../quote_rate/ship.html">Ship</a></li> 
                 </ul>
             </li>
             <li class="sidebar_item">
@@ -161,7 +161,7 @@
     <!-- Header -->
     <header class="container header flex_align">
         <div class="left_header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" id="open_menu" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" id="open_menu" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg>
             <a id="main_logo" href="../../index.html">
@@ -186,13 +186,15 @@
                     <i class="bi bi-chevron-down"></i>
                 </div> 
             </div> 
-            <button class="btn_pri">
+            <a href="../contact.html">
+                <button class="btn_pri">
                     Help
                 </button>
+            </a>
             <button class="btn_pri" id="login_btn">
                 Login
             </button>
-            <button class="btn_pri" id="local_time"></button>  
+            <button class="btn_sec" id="local_time"></button>  
         </div>
     </header>
 
@@ -201,7 +203,7 @@
         <div class="slug">
             <a href="../../index.html" class="slug_item">Home</a>
             <span class="slug_item">></span>
-            <a href="#" class="slug_item">Now_Delivery</a>
+            <a href="./moving.html" class="slug_item">Moving_Lead</a>
         </div>
         <h2 class="page_title">MOVING LEAD</h2>
     </div>
@@ -232,7 +234,14 @@
                         <input type="enail" name="receiver_email" id="receiver_email" class="page_inp" placeholder="How many Leads you want?">
                     </div>
                 </div>
-                <button class="page_main_btn lead_pri_btn" type="submit">Search</button>                
+                <button class="btn_pri" type="submit">Search</button>                
+            </div>
+            <div class="addcart_sall flex_align">
+                <button class="page_main_btn lead_pri_btn">Add to Cart</button>
+                <div class="qs_item check_inp_field">
+                    <input type="checkbox" name="s_all" id="s_all">
+                    <label for="s_all">Select All</label>
+                </div>
             </div>
             <div class="leads_section full_inp_sec">
                 <div class="lead_item half_inp" _uid="0" >
@@ -331,18 +340,18 @@
         <div class="container top_footer">
             <div class="foot_item com_desc">
                 <div>
-                    <a href="#">
-                        <img src="../../images/zoleni_logo.png" alt="logo" height="40px">
+                    <a href="../../index.html">
+                        <img src="../../images/zoleni_logo.png" alt="logo" height="35px">
                     </a>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi aliquam earum commodi iure debitis minus enim. Praesentium ducimus facilis tempora voluptates, tempore ullam cupiditate veritatis perferendis. Et cumque animi dolor.</p>
+                    <p>Zoleni is an innovative online marketplace connecting customers with delivery, moving, concierge, and storage services. Our mission is to modernize and optimize these industries through technology. </p>
                 </div>
                 <button class="btn_pri download_btn">Download App</button>
             </div>
             <div class="foot_item">
                 <h4>Helpful Links</h4>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
                     <li><a href="#">FAQs</a></li>
                     <li><a href="#">Tearms</a></li>
                 </ul>
@@ -350,9 +359,9 @@
             <div class="foot_item">
                 <h4>Account Links</h4>
                 <ul>
-                    <li><a href="#">Customer</a></li>
-                    <li><a href="#">Driver</a></li>
-                    <li><a href="#">Corporate</a></li>
+                    <li><a href="../customer.html">Customer</a></li>
+                    <li><a href="../driver.html">Driver</a></li>
+                    <li><a href="../corporate.html">Corporate</a></li>
                 </ul>
             </div>
             <div class="foot_item newslatter">

@@ -107,7 +107,8 @@ button{
 
 .right_header .select_box select option{
     border-radius: 0px !important;
-    padding: 5px 0;
+    padding: 10px !important;
+    height: 25px !important;
 }
 
 
@@ -646,7 +647,22 @@ footer li{
     .bottom_sidebar{
         display: flex;
     }
+    .select_box{
+        display: none;
+    }
 
+}
+
+@media (width > 500px) and (width <= 950px) {
+    .select_box{
+        display: none !important;
+    }
+    .container{
+        padding: 0 50px;
+    }
+    .section_title{
+        padding-left: 50px;
+    }
 }
 
 @media (width > 500px) and (width <= 1200px){

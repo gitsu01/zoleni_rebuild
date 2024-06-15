@@ -91,9 +91,9 @@
                 <ul id="quote_list">
                     <li><a href="./pages/quote_rate/delivery/index.html">Delivery</a></li>
                     <li><a href="./pages/quote_rate/delivery/interactive.html">Interactive Delivery</a></li>
-                    <li><a href="#">Moving</a></li> 
-                    <li><a href="#">Storage</a></li> 
-                    <li><a href="#">Ship</a></li> 
+                    <li><a href="./pages/quote_rate/moving.html">Moving</a></li> 
+                    <li><a href="./pages/quote_rate/storage.html">Storage</a></li> 
+                    <li><a href="./pages/quote_rate/ship.html">Ship</a></li> 
                 </ul>
             </li>
             <li class="sidebar_item">
@@ -161,7 +161,7 @@
     <!-- Header -->
     <header class="container header flex_align">
         <div class="left_header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" id="open_menu" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" id="open_menu" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg>
             <a id="main_logo" href="./index.html">
@@ -187,7 +187,7 @@
             </div> 
         </div> 
         <a href="./pages/contact.html">
-            <button class="btn_sec">
+            <button class="btn_pri">
                 Help
             </button>
         </a>
@@ -195,7 +195,7 @@
             <button class="btn_pri" id="login_btn">
                 Login
             </button>
-            <button class="btn_pri" id="local_time">
+            <button class="btn_sec" id="local_time">
                 00:00:00
             </button>  
         </div>
@@ -203,9 +203,12 @@
 
     <!-- Filters -->
     <div class="side_filters">
-        <h2 class="side_filter_title">
-            Filters
-        </h2>
+        <div class="filter_div">
+            <i class="bi bi-x-lg"  id="close_filter"></i>
+            <h2 class="side_filter_title">
+                Filters
+            </h2>
+        </div>
         <div class="filter">
             <h3 class="sub_menu_title">Category</h3>
             <ul class="categories">
@@ -257,7 +260,7 @@
                 </li>
             </ul>
         </div>
-        <div class="filter f_last">
+        <div class="filter ">
             <h3 class="sub_menu_title">24/7</h3>
             <ul class="24_7 f_options flex_g2">
                 <li class="f_option">
@@ -270,13 +273,26 @@
                 </li>
             </ul>
         </div>
+        <div class="filter f_last">
+            <h3 class="sub_menu_title">Location</h3>
+            <ul class="categories">
+                <li class="category">
+                    <input type="checkbox" name="10" id="10">
+                    <label for="10">Toronto</label>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- Middle Container -->
     <div class="middle_container">
-        <h3 class="sub_menu_title">Search any Address</h3>
-        <div class="search_sec">
-            <input type="text" placeholder="Search Any Address">
+        <h3 class="sub_menu_title">Search</h3>
+        <div class="search_sec flex_align">
+            <span id="filter_op_btn">Filter</span>
+            <select name="language" id="language">
+                <option value="">Select Language</option>
+            </select>
+            <input type="text" placeholder="Type any Company Name or Keyword">
             <button class="serBtn">SEARCH</button>
         </div>
         <h3 class="side_filter_title m_title">All Result</h3>
@@ -439,8 +455,48 @@
         </div>
     </div>
 
+    <button id="map_toggole">
+        <i class="bi bi-map-fill"></i>
+    </button>
+
+    <script>
+        let filter_op_btn = document.getElementById('filter_op_btn');
+        let close_filter = document.getElementById('close_filter');
+        let side_filter = document.querySelector('.side_filters');
+
+        filter_op_btn.addEventListener('click', () =>{
+            side_filter.classList.toggle('show');
+        });
+
+        close_filter.addEventListener('click', () =>{
+            side_filter.classList.toggle('show');
+        });
+
+        let map_toggole = document.getElementById('map_toggole');
+        map_toggole.addEventListener('click', () => {
+            let map = document.querySelector('.map_container');
+            map.classList.toggle('show');
+        })
 
 
+
+        
+
+
+        function toggole_filter() {
+            console.log('click');
+            let side_filter = document.querySelector('.side_filters');
+            side_filter.classList.toggle('show');
+        }
+
+
+
+        // Language Option
+        let langu_list = `
+            <option  value='79'>Akan</option><option  value='48'>Amharic</option><option  value='5'>Arabic</option><option  value='68'>Assamese</option><option  value='54'>Awadhi</option><option  value='53'>Azerbaijani</option><option  value='100'>Balochi</option><option  value='99'>Belarusian</option><option  value='7'>Bengali</option><option  value='42'>Bhojpuri</option><option  value='39'>Burmese</option><option  value='56'>Cebuano</option><option  value='77'>Chewa</option><option  value='75'>Chhattisgarhi</option><option  value='64'>Chittagonian</option><option  value='84'>Czech</option><option  value='78'>Deccan</option><option  value='86'>Dhundhari</option><option  value='57'>Dutch</option><option  value='88'>Eastern</option><option  value='3'>English</option><option  value='18'>French</option><option  value='49'>Fula</option><option  value='55'>Gan</option><option  value='11'>German</option><option  value='76'>Greek</option><option  value='26'>Gujarati</option><option  value='87'>Haitian</option><option  value='40'>Hakka</option><option  value='73'>Haryanvi</option><option  value='37'>Hausa</option><option  value='96'>Hiligaynon</option><option  value='4'>Hindi</option><option  value='93'>Hmong</option><option  value='74'>Hungarian</option><option  value='52'>Igbo</option><option  value='89'>Ilocano</option><option  value='23'>Italian</option><option  value='9'>Japanese</option><option  value='12'>Javanese</option><option  value='27'>Jin</option><option  value='32'>Kannada</option><option  value='80'>Kazakh</option><option  value='66'>Khmer</option><option  value='85'>Kinyarwanda</option><option  value='91'>Kirundi</option><option  value='101'>Konkani</option><option  value='17'>Korean</option><option  value='58'>Kurdish</option><option  value='69'>Madurese</option><option  value='72'>Magahi</option><option  value='45'>Maithili</option><option  value='60'>Malagasy</option><option  value='14'>Malay/Indonesian</option><option  value='34'>Malayalam</option><option  value='1'>Mandarin</option><option  value='19'>Marathi</option><option  value='71'>Marwari</option><option  value='97'>Mossi</option><option  value='62'>Nepali</option><option  value='81'>Northern</option><option  value='38'>Odia</option><option  value='51'>Oromo</option><option  value='31'>Pashto</option><option  value='29'>Persian</option><option  value='30'>Polish</option><option  value='6'>Portuguese</option><option  value='10'>Punjabi</option><option  value='90'>Quechua</option><option  value='50'>Romanian</option><option  value='8'>Russian</option><option  value='61'>Saraiki</option><option  value='59'>Serbo-Croatian</option><option  value='94'>Shona</option><option  value='47'>Sindhi</option><option  value='63'>Sinhalese</option><option  value='70'>Somali</option><option  value='28'>Southern</option><option  value='2'>Spanish</option><option  value='35'>Sundanese</option><option  value='92'>Swedish</option><option  value='82'>Sylheti</option><option  value='43'>Tagalog</option><option  value='36'>Tamazight</option><option  value='20'>Tamil</option><option  value='15'>Telugu</option><option  value='25'>Thai</option><option  value='22'>Turkish</option><option  value='67'>Turkmen</option><option  value='41'>Ukrainian</option><option  value='21'>Urdu</option><option  value='95'>Uyghur</option><option  value='46'>Uzbek</option><option  value='16'>Vietnamese</option><option  value='13'>Wu</option><option  value='98'>Xhosa</option><option  value='33'>Xiang</option><option  value='44'>Yoruba</option><option  value='24'>Yue</option><option  value='65'>Zhuang</option><option  value='83'>Zulu</option>
+        `;
+        document.getElementById('language').innerHTML += langu_list;
+    </script>
     <script src="./index.js"></script>
 
 </body>

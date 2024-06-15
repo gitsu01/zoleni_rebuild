@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lead [ Storage ] - Zoleni</title>
+    <title>Moving Quote - Zoleni</title>
     <link rel="stylesheet" href="../pages_style.css">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -13,7 +13,7 @@
     <div class="sidebar" id="sidebar">
         <div class="top_sidebar flex_align">
             <a href="../../index.html">
-                <img src="../../images/zoleni_logo.png" alt="#" >
+                <img src="../../images/zoleni_logo.png" alt="#">
             </a>
             <i class="bi bi-x-lg"  id="close_menu"></i>
         </div>
@@ -47,7 +47,7 @@
                     <i class="bi bi-chevron-down"></i>
                 </div>
                 <ul id="moving_list">
-                    <li><a href="../moving/now.html">Booking Now</a></li>
+                    <li><a href="./now.html">Booking Now</a></li>
                     <li><a href="../../business_directory.html">Business Directory</a></li> 
                 </ul>
             </li>
@@ -89,11 +89,11 @@
                     <i class="bi bi-chevron-down"></i>
                 </div>
                 <ul id="quote_list">
-                    <li><a href="../quote_rate/delivery/index.html">Delivery</a></li>
-                    <li><a href="../quote_rate/delivery/interactive.html">Interactive Delivery</a></li>
-                    <li><a href="../quote_rate/moving.html">Moving</a></li> 
-                    <li><a href="../quote_rate/storage.html">Storage</a></li> 
-                    <li><a href="../quote_rate/ship.html">Ship</a></li> 
+                    <li><a href="./delivery/index.html">Delivery</a></li>
+                    <li><a href="./delivery/interactive.html">Interactive Delivery</a></li>
+                    <li><a href="./moving.html">Moving</a></li> 
+                    <li><a href="./storage.html">Storage</a></li> 
+                    <li><a href="./ship.html">Ship</a></li> 
                 </ul>
             </li>
             <li class="sidebar_item">
@@ -103,9 +103,9 @@
                     <i class="bi bi-chevron-down"></i>
                 </div>
                 <ul id="lead_net_list">
-                    <li><a href="./moving.html">Moving</a></li> 
-                    <li><a href="./storage.html">Storage</a></li> 
-                    <li><a href="./ship.html">Ship</a></li> 
+                    <li><a href="../lead/moving.html">Moving</a></li> 
+                    <li><a href="../lead/storage.html">Storage</a></li> 
+                    <li><a href="../lead/ship.html">Ship</a></li> 
                 </ul>
             </li>
         </ul>
@@ -186,11 +186,9 @@
                     <i class="bi bi-chevron-down"></i>
                 </div> 
             </div> 
-            <a href="../contact.html">
-                <button class="btn_pri">
+            <button class="btn_pri">
                     Help
                 </button>
-            </a>
             <button class="btn_pri" id="login_btn">
                 Login
             </button>
@@ -203,136 +201,131 @@
         <div class="slug">
             <a href="../../index.html" class="slug_item">Home</a>
             <span class="slug_item">></span>
-            <a href="./storage.html" class="slug_item">Storage_Lead</a>
+            <a href="./moving.html" class="slug_item">Moving Quote</a>
         </div>
-        <h2 class="page_title">STORAGE LEAD</h2>
+        <h2 class="page_title">MOVING QUOTE</h2>
     </div>
 
     <!-- Input Section -->
     <div class="container page_inp_sec">
         <div class="right_inp_sec">
-            <div class="moving_lead_serach">
+            <div id="moving_info">
+                <h3 class="inp_sec_title">Loading and Unloading Help</h3>
+                <div class="full_inp_sec gap_0">
+                    <select class="select" name="truck_size" id="truck_size">
+                        <option value="">Select Truck Size</option>
+                        <option value="">10ft</option>
+                        <option value="">14ft</option>
+                        <option value="">20ft</option>
+                        <option value="">22ft</option>
+                    </select>
+                    <select class="select truck_time" name="truck_time" id="truck_time"></select>
+                    <select class="select" name="worker_number" id="worker_number"></select>
+                    <select class="select" name="worker_time" id="worker_time"></select>
+                </div>
+            </div>
+            <div id="moving_info">
+                <h3 class="inp_sec_title">Moving Informaion</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="date" name="quote_move_date" id="quote_move_date">
+                    <select class="select" name="building_type" id="building_type">
+                        <option value="">Building Type</option>
+                        <option  value='12'>Apartment</option>
+                        <option  value='11'>Banglow</option>
+                        <option  value='9'>House</option>
+                        <option  value='14'>Industrial</option>
+                        <option  value='13'>Office Building</option>
+                        <option  value='15'>Shop</option>
+                        <option  value='16'>Storage</option>
+                        <option  value='10'>Townhouse</option>
+                    </select>
+                </div>
+                <div class="full_inp_sec gap_0">                    
+                    <select class="select" name="type_of_entra_from" id="type_of_entra_from">
+                        <option value="">Type of Entrance [From]</option>
+                        <option  value='22'>Elevator</option>
+                        <option  value='17'>Ground Floor</option>
+                        <option  value='23'>Private House</option>
+                        <option  value='18'>Stairs 2nd Floor</option>
+                        <option  value='19'>Stairs 3rd Floor</option>
+                        <option  value='20'>Stairs 4rth Floor</option>
+                        <option  value='21'>Stairs 5th Floor</option>
+                    </select>
+                    <select class="select" name="type_of_entra_to" id="type_of_entra_to">
+                        <option value="">Type of Entrance [To]</option>
+                        <option  value='22'>Elevator</option>
+                        <option  value='17'>Ground Floor</option>
+                        <option  value='23'>Private House</option>
+                        <option  value='18'>Stairs 2nd Floor</option>
+                        <option  value='19'>Stairs 3rd Floor</option>
+                        <option  value='20'>Stairs 4rth Floor</option>
+                        <option  value='21'>Stairs 5th Floor</option>
+                    </select>
+                    <select class="select" name="time" id="time">
+                        <option value="">Area Size</option>
+                        <option  value='27'>1500-2500 sq. ft.</option>
+                        <option  value='28'>2500-3500 sq. ft.</option>
+                        <option  value='25'>600-800 sq. ft.</option>
+                        <option  value='26'>800-1500 sq. ft.</option>
+                        <option  value='24'>Less than 600 sq. ft.</option>
+                        <option  value='29'>over 3500 sq. ft.</option>
+                    </select>
+                </div>
+            </div>
+            <div class="quote_s_featur">
+                <h3 class="inp_sec_title">Special Articles (Please select following article if any)</h3>
+                <div class="full_inp_sec gap_0" id="qm_articles">
+                    
+                </div>
+            </div>
+            <div id="packing_services">
+                <h3 class="inp_sec_title">Packing</h3>
                 <div class="full_inp_sec gap_0">
                     <div class="half_inp">
-                        <select class="select" name="s_tower_build" id="s_tower_build">
-                            <option value="">Select Booking Type</option>
-                            <option value="yes">Vahicle</option>
-                            <option value="no">Unit</option>
-                            <option value="no">Both</option>
-                        </select>
-                        <select class="select" name="s_tower_build" id="s_tower_build">
-                            <option value="">Select Days / Week / Month</option>
-                            <option value="yes">Days</option>
-                            <option value="no">Weeks</option>
-                            <option value="no">Months</option>
+                        <select class="select half_inp" name="package_ser_type" id="package_ser_type">
+                            <option value="">Select</option>
+                            <option value="labor_worker">Labors/Worker</option>
+                            <option value="moving_supply">Moving Supply</option>
+                            <option value="both">Both</option>
                         </select>
                     </div>
-                    <div class="half_inp">
-                        <select class="select" name="s_tower_build" id="s_tower_build">
-                            <option value="">Features</option>
-                            <option value="196">Account Management</option><option value="192">Adequate Lighting</option><option value="186">Climate Control</option><option value="148">Drive Up</option><option value="193">Dust and Pest Control</option><option value="149">Heated</option><option value="189">Hour Access</option><option value="191">Locker</option><option value="187">Moving Supplies Available</option><option value="185">Premium Security</option><option value="194">Secure Access</option><option value="188">Vehicle Storage</option><option value="190">Video Surveillances</option><option value="195">Wide Drive Aisles</option>
-                        </select>
-                        <input type="enail" name="receiver_email" id="receiver_email" class="page_inp" placeholder="How many Leads you want?">
-                    </div>
-                </div>
-                <button class="btn_pri" type="submit">Search</button>                
-            </div>
-            <div class="addcart_sall flex_align">
-                <button class="page_main_btn lead_pri_btn">Add to Cart</button>
-                <div class="qs_item check_inp_field">
-                    <input type="checkbox" name="s_all" id="s_all">
-                    <label for="s_all">Select All</label>
-                </div>
-            </div>
-            <div class="leads_section full_inp_sec">
-                <div class="lead_item half_inp" _uid="0" >
-                    <div class="inp_box">
-                        <input type="checkbox" name="" id="1" class="select"></input>
-                        <h2>$ 10</h2>
-                    </div>
-                    <div class="lead_content">
-                        <section>
-                            <h3>Loading and Unloading Help</h3>
-                            <div class="p_sec">
-                                <p><b>Truck : </b>22ft [ 8 Hours ]</p>
-                                <p><b>Workers Required : </b>6 [ 7 Hours ]</p>
-                            </div>
-                        </section>
-                        <section>
-                            <h3>Delivery Information</h3>
-                            <div class="p_sec">
-                                <p><b>Pickup Date / Time : </b>Apr 30, 2024 / 10:30</p>
-                            </div>
-                        </section>
-                        <section>
-                            <h3>Moving Information</h3>
-                            <div class="p_sec">
-                                <p><b>Building Type : </b>Office Building</p>
-                                <p><b>Type of Entrance : </b>Stairs 2nd Floor to Stairs 4rth Floor</p>
-                                <p><b>Area Size : </b>over 3500 sq. ft</p>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <div class="lead_item half_inp" _uid="0" >
-                    <div class="inp_box">
-                        <input type="checkbox" name="" id="1" class="select"></input>
-                        <h2>$ 10</h2>
-                    </div>
-                    <div class="lead_content">
-                        <section>
-                            <h3>Loading and Unloading Help</h3>
-                            <div class="p_sec">
-                                <p><b>Truck : </b>22ft [ 8 Hours ]</p>
-                                <p><b>Workers Required : </b>6 [ 7 Hours ]</p>
-                            </div>
-                        </section>
-                        <section>
-                            <h3>Delivery Information</h3>
-                            <div class="p_sec">
-                                <p><b>Pickup Date / Time : </b>Apr 30, 2024 / 10:30</p>
-                            </div>
-                        </section>
-                        <section>
-                            <h3>Moving Information</h3>
-                            <div class="p_sec">
-                                <p><b>Building Type : </b>Office Building</p>
-                                <p><b>Type of Entrance : </b>Stairs 2nd Floor to Stairs 4rth Floor</p>
-                                <p><b>Area Size : </b>over 3500 sq. ft</p>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <div class="lead_item half_inp" _uid="0" >
-                    <div class="inp_box">
-                        <input type="checkbox" name="" id="1" class="select"></input>
-                        <h2>$ 10</h2>
-                    </div>
-                    <div class="lead_content">
-                        <section>
-                            <h3>Loading and Unloading Help</h3>
-                            <div class="p_sec">
-                                <p><b>Truck : </b>22ft [ 8 Hours ]</p>
-                                <p><b>Workers Required : </b>6 [ 7 Hours ]</p>
-                            </div>
-                        </section>
-                        <section>
-                            <h3>Delivery Information</h3>
-                            <div class="p_sec">
-                                <p><b>Pickup Date / Time : </b>Apr 30, 2024 / 10:30</p>
-                            </div>
-                        </section>
-                        <section>
-                            <h3>Moving Information</h3>
-                            <div class="p_sec">
-                                <p><b>Building Type : </b>Office Building</p>
-                                <p><b>Type of Entrance : </b>Stairs 2nd Floor to Stairs 4rth Floor</p>
-                                <p><b>Area Size : </b>over 3500 sq. ft</p>
-                            </div>
-                        </section>
+                    <div id="pac_ser_type_extra" class="half_inp p_s_sec_select">
+                        <select class="select" name="for_pack_labor" id="for_pack_labor"></select>
+                        <select class="select labor_time" name="labor_time" id="labor_time"></select>
                     </div>
                 </div>
             </div>
+            <div class="pickup_details">
+                <h3 class="inp_sec_title">Pickup Details</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Type Pickup Addredd">
+                </div>
+            </div>
+            <div class="dropoff_details">
+                <h3 class="inp_sec_title">Dropoff Details</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Type Dropoff Addredd">
+                </div>
+            </div>
+            <div class="move_in_date">
+                <h3 class="inp_sec_title">Insurance & Quote</h3>
+                <div class="full_inp_sec gap_0">
+                    <select class="select" name="ins_type" id="ins_type"></select>
+                    <select class="select" name="quote_op" id="quote_op"></select>
+                </div>
+            </div>
+            <div class="your_contact">
+                <h3 class="inp_sec_title">Your Contact</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Your Name">
+                    <input type="text" placeholder="Email Address">
+                    <input type="text" placeholder="Contact Number">
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Write Note">
+                </div>
+            </div>
+            <button class="page_main_btn" type="submit">Continue</button>
         </div>
     </div>
 
@@ -389,6 +382,113 @@
         </div>
     </footer>
 
+    <script>
+        // Labor time & Options
+        let for_pack_labor = document.getElementById('for_pack_labor');
+        let worker_number = document.getElementById('worker_number');
+        let labor_opt = `<option value="">Select Number of Labor</option>`;
+
+        for (let i = 1; i < 11; i++) {
+            labor_opt += `<option value="${i}">${i}</option>`;
+        }
+        worker_number.innerHTML = labor_opt;
+        for_pack_labor.innerHTML = labor_opt;
+
+        let labor_time = document.getElementById('labor_time');
+        let worker_time = document.getElementById('worker_time');
+        let labor_time_opt = `<option value="">Hours for Loading & Unloading</option>`;
+
+        let truck_time = document.getElementById('truck_time');
+        let ttime_list = `<option value="">Select Hours</option>`;
+
+
+        for (let i = 1; i < 21; i++) { 
+            ttime_list += `<option value="${i}_hours">${i} Hours</option>`; 
+            labor_time_opt += `<option value="${i}_hours">${i} Hours</option>`;  
+        }
+
+        labor_time.innerHTML = labor_time_opt;
+        worker_time.innerHTML = labor_time_opt;
+        truck_time.innerHTML = ttime_list;  
+
+        // Show/Hide Packing Details Secondary
+        let pac_ser_type_extra = document.getElementById('pac_ser_type_extra');
+        let package_ser_type = document.getElementById('package_ser_type');
+
+        package_ser_type.addEventListener('change', () => {
+            if (package_ser_type.value == 'labor_worker' || package_ser_type.value == 'both') {
+                if(pac_ser_type_extra.classList.contains('hide')){
+                    pac_ser_type_extra.classList.remove('hide');
+                }
+                pac_ser_type_extra.classList.add('show');
+            }else{
+                if(pac_ser_type_extra.classList.contains('show')){
+                    pac_ser_type_extra.classList.remove('show');
+                }
+                pac_ser_type_extra.classList.add('hide');
+
+            }
+        })
+
+        // qm_articles
+        let qm_articles = document.getElementById('qm_articles');
+        let fInnerhtml = '';
+        let articles = [
+            'Any item over 150 Lbs',
+            'Baby Piano',
+            'Double Door Fridge',
+            'Grand Piano',
+            'Heavy Gym Equipment',
+            'Hot Tub',
+            'Industrial Equipment',
+            'Large Office Printer',
+            'Pool Table',
+            'Upright Piano'
+
+        ]
+
+        articles.forEach((item, index) => {
+            fInnerhtml += `
+                <div class="qs_item check_inp_field">
+                    <input type="checkbox" name="${item}" id="${index}">
+                    <label for="${index}">${item}</label>
+                </div>
+            `;
+        })
+
+        qm_articles.innerHTML = fInnerhtml;
+
+        // Quote Number
+        let quote_op = document.getElementById('quote_op');
+        let options = `<option value="">How many quotes you want?</option>`;
+
+        for (let i = 1; i < 11; i++) {
+            options += `<option value="${i}">${i}</option>`;            
+        }
+
+        quote_op.innerHTML = options;
+
+        // Insurance
+        let ins_type = document.getElementsByName('ins_type');
+        console.log(ins_type);
+        let ins_list = `
+            <option value="">Select Insurance Type</option>
+            <option value="envelope">No, I dont need insurance</option>
+        `;
+
+        let i = 10;
+        while (i <= 100) {
+            let element = `<option value="${i*10}">Yes, $ ${i*10} [  Pay $ ${i}  ]</option>`;
+            ins_list += element;
+            
+            i += 5;
+        }
+
+        ins_type.forEach((item) => {
+            item.innerHTML = ins_list;
+        })
+
+    </script>
     <script src="../../index.js"></script>
     
 </body>

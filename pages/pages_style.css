@@ -26,7 +26,8 @@
 }
 #add_package,
 #add_exc_inp,
-#add_delivery_act{
+#add_delivery_act,
+#add_vahicle_box{
     height: 25px;
     padding: 0;
     background: transparent;
@@ -34,13 +35,14 @@
 
 #add_package i,
 #add_exc_inp i,
-#add_delivery_act i{
+#add_delivery_act i,
+#add_vahicle_box i{
     font-size: 18px;
     margin-right: 6px;
 }
 
 .inp_sec_title{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 12px;
 }
@@ -67,7 +69,7 @@ textarea {
     height: 40px;
     padding: 0 12px;    
     margin-bottom: 12px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 10px;
     background-color: #f0f0f0;
 }
@@ -246,6 +248,11 @@ textarea{
     gap: 8px;
     padding: 0;
 }
+.qs_item{
+    width: fit-content !important;
+    border: none;
+}
+
 .check_inp_field input{
     appearance: none;
     /* height: 20px; */
@@ -253,14 +260,22 @@ textarea{
     border-radius: 0px;
     margin: 0px;
 }
+.qs_item input {
+    height: 20px !important;
+    width: 20px !important;
+    border-radius: 20px;
+}
 .check_inp_field input:checked{
     content: '7';
     background-color: #2873ff;
 }
 
+.qs_item label{
+    padding: 0 !important;
+}
 .check_inp_field label{
     padding: 5px 25px 5px 5px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .check_inp_sec{
@@ -307,8 +322,12 @@ textarea{
 }
 
 /* Lead */
+.addcart_sall{
+    margin-top: 20px;
+    justify-content: space-between;
+}
 .leads_section{
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -350,4 +369,43 @@ textarea{
     margin-bottom: 15px;
 }
 
-/* Multi Dropoff & Multi Pickup */
+/* Quote Storage */
+#qs_feature{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* vahicle_box */
+#qs_vahicle,
+#qs_unit{
+    display: none;
+}
+
+#qs_vahicle.show,
+#qs_unit.show{
+    display: block;
+}
+
+/* qm_articles */
+#qm_articles,
+#qs_ship_services{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+#qm_articles .qs_item,
+#qs_ship_services .qs_item{
+    width: 100% !important;
+    max-width: 280px;
+}
+
+#qs_ship_services .qs_item:last-child{
+    max-width: fit-content;
+}
+
+.right_inp_sec > div {
+    margin-bottom: 5px;
+}
