@@ -141,6 +141,7 @@ while (hour < 24) {
     hour += 1;
 }
 
+console.log(inte_dtime);
 inte_dtime[0].innerHTML += time_list;
 weekly_sel_inp.forEach((item) => {
     item.innerHTML += time_list;

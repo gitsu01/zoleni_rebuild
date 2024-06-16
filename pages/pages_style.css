@@ -409,3 +409,80 @@ textarea{
 .right_inp_sec > div {
     margin-bottom: 5px;
 }
+
+.page_popup{
+    display: none;
+    padding: 40px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 900px;
+    min-height: 500px;
+    background-color: #fcfcfc;
+    height: fit-content;
+    transition: all 0.3s ease-in;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+#multi_pickup.show{
+    display: block;
+}
+#add_multi_pickup.show{
+    display: block;
+}
+
+#close_popup{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 10px;
+    color: #f2f2f2;
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 5px;
+    /* border-radius: 50%; */
+}
+.popup_title{
+    font-size: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.page_popup table{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.page_popup table thead{
+    background-color: var(--dark-primary-color);
+}
+.page_popup table thead tr th{
+    color: #fff;
+    border: 1px solid var(--dark-primary-color);
+    padding: 8px;
+}
+
+.page_popup table{
+    border-collapse: collapse;
+}
+.page_popup table tbody tr td{
+    padding: 6px;
+    text-align: center;
+    border: 1px solid var(--dark-primary-color);
+}
+
+.tbl_btn{
+    padding: 3px;
+    cursor: pointer;
+    color: rgb(217, 59, 59);
+}
+
+.tbl_btn:first-child{
+    margin-right: 10px;
+    color: var(--dark-primary-color);
+}
