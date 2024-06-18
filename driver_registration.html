@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Zoleni</title>
+    <title>Driver Registration - Zoleni</title>
+    <link rel="stylesheet" href="css/pages_style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-      <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <div>
     <!-- Sidebar -->
@@ -201,74 +201,40 @@
         </div>
     </header>
 
-    <div class="swiper hero_swipwer">
-        <div class="swiper-wrapper">
-            <div class="hero_section swiper-slide">
-                <div class="container hero_content">
-                    <div class="content_sec">
-                        <h1 class="hero_title">TORONO’S TRUSTED <br>DELIVERY PARTNER</h1>
-                        <p class="hero_subtitle">Seamlessly delivering what you need, <br>when you need it.</p>
-                    </div>
-                    <button class="btn_pri">Explore Our Services</button>
-                </div>        
-                <img class="hero_img" src="./images/hero.png" alt="image">
-            </div>
-            <div class="hero_section swiper-slide">
-                <div class="container hero_content">
-                    <div class="content_sec">
-                        <h1 class="hero_title">TORONO’S TRUSTED <br>DELIVERY PARTNER</h1>
-                        <p class="hero_subtitle">Seamlessly delivering what you need, <br>when you need it.</p>
-                    </div>
-                    <button class="btn_pri">Explore Our Services</button>
-                </div>        
-                <img class="hero_img" src="./images/moving_img.png" alt="image">
-            </div>
+    <!-- Title Section-->
+    <div class="container page_title_sec">
+        <div class="slug">
+            <a href="../index.html" class="slug_item">Home</a>
+            <span class="slug_item">></span>
+            <a href="./driver.html" class="slug_item">Driver_Registration</a>
         </div>
-        <div class="swiper-pagination"></div>
+        <h2 class="page_title">REGISTRATION</h2>
     </div>
 
-    <!-- Our Service -->
-    <section class="our_service">
-        <h2 class="section_title">Our Services</h2>
-        <div class="container service_cards">
-            <div class="service_card">
-                <img src="./images/delivery_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Delivery Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
-                    </div>
-                    <a href="./pages/delivery/now.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
-                </div>
-            </div>
-            <div class="service_card">
-                <img src="./images/moving_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Moving Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
-                    </div>
-                    <a href="./pages/moving/now.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
-                </div>
-            </div>
-            <div class="service_card">
-                <img src="./images/storage_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Storage Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
-                    </div>
-                    <a href="./business_directory.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
-                </div>
-            </div>
+    <div class="container contact_sec">
+        <div class="left_inp_sec">
+            <img src="../images/delivery_img.png" alt="">
         </div>
-    </section>
+        <div class="right_inp_sec">
+            <h2 class="inp_sec_title">Driver Registration</h2>
+            <div class="full_inp_sec gap_0">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <h2 class="inp_sec_title">Login Details</h2>
+            <div class="full_inp_sec gap_0">
+                <input type="email" placeholder="Email Address">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+            </div> 
+            <div class="inp_check">
+                <input type="checkbox" name="" id="terms">
+                <label for="terms">I agree to terms & conditions</label>
+            </div>  
+            <button class="btn_pri">Register</button>       
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -325,22 +291,9 @@
         </div>
     </footer>
 
-    
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".hero_swipwer", {
-            pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-            },
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            }
-        });
-    </script>
+
+
     <script src="js/index.js"></script>
-</body>
+    </body>
+
 </html>

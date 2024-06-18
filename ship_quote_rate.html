@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Zoleni</title>
+    <title>Ship Quote - Zoleni</title>
+    <link rel="stylesheet" href="css/pages_style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-      <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<div>
+<body>
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="top_sidebar flex_align">
@@ -201,74 +200,93 @@
         </div>
     </header>
 
-    <div class="swiper hero_swipwer">
-        <div class="swiper-wrapper">
-            <div class="hero_section swiper-slide">
-                <div class="container hero_content">
-                    <div class="content_sec">
-                        <h1 class="hero_title">TORONO’S TRUSTED <br>DELIVERY PARTNER</h1>
-                        <p class="hero_subtitle">Seamlessly delivering what you need, <br>when you need it.</p>
-                    </div>
-                    <button class="btn_pri">Explore Our Services</button>
-                </div>        
-                <img class="hero_img" src="./images/hero.png" alt="image">
-            </div>
-            <div class="hero_section swiper-slide">
-                <div class="container hero_content">
-                    <div class="content_sec">
-                        <h1 class="hero_title">TORONO’S TRUSTED <br>DELIVERY PARTNER</h1>
-                        <p class="hero_subtitle">Seamlessly delivering what you need, <br>when you need it.</p>
-                    </div>
-                    <button class="btn_pri">Explore Our Services</button>
-                </div>        
-                <img class="hero_img" src="./images/moving_img.png" alt="image">
-            </div>
+    <!-- Title Section-->
+    <div class="container page_title_sec">
+        <div class="slug">
+            <a href="../../index.html" class="slug_item">Home</a>
+            <span class="slug_item">></span>
+            <a href="./ship.html" class="slug_item">Ship_Quote</a>
         </div>
-        <div class="swiper-pagination"></div>
+        <h2 class="page_title">QUOTE RATE - SHIP</h2>
     </div>
 
-    <!-- Our Service -->
-    <section class="our_service">
-        <h2 class="section_title">Our Services</h2>
-        <div class="container service_cards">
-            <div class="service_card">
-                <img src="./images/delivery_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Delivery Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
+    <!-- Input Section -->
+    <div class="container page_inp_sec">
+        <div class="right_inp_sec">
+            <div class="loadDate_SerType">
+                <div class="half_inp">
+                    <h3 class="inp_sec_title">Requested Loading Date</h3>
+                    <input type="date" name="load_date" id="load_date">
+                </div>
+                <div id="packing_services">
+                    <h3 class="inp_sec_title">Service Type</h3>
+                    <div class="full_inp_sec gap_0">
+                        <select class="select half_inp" name="QS_service_type" id="QS_service_type" onchange="change_service_type(this)">
+                            <option value="">Select</option>
+                            <option  value='full_truck'>Full Truckload</option>
+                            <option  value='ltl'>LTL</option>
+                            <option  value='sm_parcel'>Small Parcel</option>
+                        </select>
+                        <select class="select" name="for_services" id="for_services">
+                            <option value="">Select a Service Type</option>
+                        </select>
                     </div>
-                    <a href="./pages/delivery/now.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
+                </div>
+            </div>            
+            <div class="pickup_details">
+                <h3 class="inp_sec_title">Where are you shipping from?</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Type Address">
+                    <select name="pick_add_type" id="pick_add_type" class="select">
+                        <option value="">Type Of Location</option>
+                        <option value="Business">Business</option>
+                        <option value="Residental">Residental</option>
+                        <option value="Terminal">Pick up at a carrier terminal</option>
+                        <option value="Amazon Warehouse">Amazon Warehouse</option>
+                    </select>
                 </div>
             </div>
-            <div class="service_card">
-                <img src="./images/moving_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Moving Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
-                    </div>
-                    <a href="./pages/moving/now.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
+            <div class="dropoff_details">
+                <h3 class="inp_sec_title">Where are you shipping to?</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Type Address">
+                    <select name="pick_add_type" id="pick_add_type" class="select">
+                        <option value="">Type Of Location</option>
+                        <option value="Business">Business</option>
+                        <option value="Residental">Residental</option>
+                        <option value="Terminal">Pick up at a carrier terminal</option>
+                        <option value="Amazon Warehouse">Amazon Warehouse</option>
+                    </select>
                 </div>
             </div>
-            <div class="service_card">
-                <img src="./images/storage_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Storage Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
-                    </div>
-                    <a href="./business_directory.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
+            <div class="quote_s_featur">
+                <h3 class="inp_sec_title">Do you need any additional service?</h3>
+                <div class="full_inp_sec gap_0" id="qs_ship_services"></div>
+            </div>
+            <div id="shiping_item">
+                <div class="ist_sec">
+                    <h3 class="inp_sec_title">What items are you shipping?</h3>
+                    <button id="add_package" onclick="add_shiping_item()">
+                        <i class="bi bi-plus-lg"></i>
+                        Add More
+                    </button>
+                </div>
+                
+            </div>
+            <div class="your_contact">
+                <h3 class="inp_sec_title">Your Contact</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Your Name">
+                    <input type="text" placeholder="Email Address">
+                    <input type="text" placeholder="Contact Number">
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Write Note">
                 </div>
             </div>
+            <button class="page_main_btn" type="submit">Continue</button>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -325,22 +343,121 @@
         </div>
     </footer>
 
-    
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".hero_swipwer", {
-            pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-            },
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            }
-        });
+        // shiping Items
+        let items = `
+            <option value="">Packaging Type</option>
+            <option value='bale'>Bale</option>
+            <option value='box'>Box</option>
+            <option value='bundle'>Bundle</option>
+            <option value='crate'>Crate</option>
+            <option value='drum'>Drum</option>
+            <option value='pallet'>Pallet</option>
+            <option value='roll'>Roll</option>
+        `;
+        let shipping_items = document.querySelectorAll('.shipping_items');
+        if(shipping_items.length != 0){
+            shipping_items[0].innerHTML = items;
+        }
+
+        function add_shiping_item() {
+            let random = Math.floor(Math.random() * 1000000);
+            let shiping_item = document.getElementById('shiping_item');
+            let ship_item = document.querySelectorAll('.ship_item');
+            
+            let elm = document.createElement('div');
+            elm.setAttribute('class', 'ship_item');
+            elm.setAttribute('id', random);
+
+            let in_html = `
+                <div class="ist_sec">
+                    <h3 class="inp_sec_title">${ship_item.length+1}.</h3>
+                    <button class="side_delete_btn" onclick="delete_ship_item(${random})"><i class="bi bi-trash"></i></button>
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Item Description">
+                    <select class="select shipping_items" name="shipping_items" id="shipping_items">
+                        ${items}
+                    </select>
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Item Length (Inches)">
+                    <input type="text" placeholder="Item Width (Inches)">
+                    <input type="text" placeholder="Item Height (Inches)">
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Item Weight (Pounds)">
+                    <input type="text" placeholder="Number of Items">
+                    <input type="text" placeholder="Number of Chains">
+                    <input type="text" placeholder="Number of Straps">
+                </div>
+            `;
+
+            elm.innerHTML = in_html;
+            shiping_item.appendChild(elm);
+        }
+
+        window.onload = add_shiping_item();
+
+        function delete_ship_item(_id) {
+            let del_item = document.getElementById(_id);
+            del_item.remove();
+        }
+
+        // qm_articles
+        let qs_ship_services = document.getElementById('qs_ship_services');
+        let fInnerhtml = '';
+        let ship_items = [
+            'Blind shipment',
+            'Driver assist',
+            'Floor loaded items',
+            'Heavy and light scaling required',
+            'Liftgate',
+            'Residential pickup/delivery',
+            'Shipment is worth more than $100,000',
+        ]
+
+        ship_items.forEach((item, index) => {
+            fInnerhtml += `
+                <div class="qs_item check_inp_field">
+                    <input type="checkbox" name="${item}" id="${index}">
+                    <label for="${index}">${item}</label>
+                </div>
+            `;
+        })
+
+        qs_ship_services.innerHTML = fInnerhtml;
+
+    //    Service Type
+    function change_service_type(e) {
+        let for_services = document.getElementById('for_services');
+        for_services.style.display = 'block';
+        let truck_op = `
+            <option value="">What equipment type do you need?</option>
+            <option value='dry_van'>Dry Van</option>
+            <option value='flatbed'>Flatbed</option>
+            <option value='temp_cont'>Temperature Controlled</option>
+        `;
+
+        let ltl_op = `
+            <option value="">What LTL service type do you need?</option>
+            <option value='hazar'>Hazardous</option>
+            <option value='standerd'>Standard LTL</option>
+            <option value='trade'>Trade show</option>
+
+        `;
+        if(e.value == 'full_truck'){
+            for_services.innerHTML = truck_op;
+        }else if (e.value == 'ltl') {
+            for_services.innerHTML = ltl_op;
+        }else if(e.value == 'sm_parcel'){
+            for_services.style.display = 'none';
+        }
+    }
+
+
     </script>
     <script src="js/index.js"></script>
+    
 </body>
 </html>

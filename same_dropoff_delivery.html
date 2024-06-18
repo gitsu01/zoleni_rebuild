@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Zoleni</title>
+    <title>Multi Pickup - Zoleni</title>
+    <link rel="stylesheet" href="css/pages_style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-      <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<div>
+<body>
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="top_sidebar flex_align">
@@ -201,74 +200,130 @@
         </div>
     </header>
 
-    <div class="swiper hero_swipwer">
-        <div class="swiper-wrapper">
-            <div class="hero_section swiper-slide">
-                <div class="container hero_content">
-                    <div class="content_sec">
-                        <h1 class="hero_title">TORONO’S TRUSTED <br>DELIVERY PARTNER</h1>
-                        <p class="hero_subtitle">Seamlessly delivering what you need, <br>when you need it.</p>
-                    </div>
-                    <button class="btn_pri">Explore Our Services</button>
-                </div>        
-                <img class="hero_img" src="./images/hero.png" alt="image">
-            </div>
-            <div class="hero_section swiper-slide">
-                <div class="container hero_content">
-                    <div class="content_sec">
-                        <h1 class="hero_title">TORONO’S TRUSTED <br>DELIVERY PARTNER</h1>
-                        <p class="hero_subtitle">Seamlessly delivering what you need, <br>when you need it.</p>
-                    </div>
-                    <button class="btn_pri">Explore Our Services</button>
-                </div>        
-                <img class="hero_img" src="./images/moving_img.png" alt="image">
-            </div>
+    <!-- Title Section-->
+    <div class="container page_title_sec">
+        <div class="slug">
+            <a href="../index.html" class="slug_item">Home</a>
+            <span class="slug_item">></span>
+            <a href="./same_dropoff.html" class="slug_item">Multi_Pickup</a>
         </div>
-        <div class="swiper-pagination"></div>
+        <h2 class="page_title">MULTI PICKUP</h2>
     </div>
 
-    <!-- Our Service -->
-    <section class="our_service">
-        <h2 class="section_title">Our Services</h2>
-        <div class="container service_cards">
-            <div class="service_card">
-                <img src="./images/delivery_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Delivery Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
-                    </div>
-                    <a href="./pages/delivery/now.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
+    <!-- Input Section -->
+    <div class="container page_inp_sec">
+        <div class="right_inp_sec">
+            <div class="date&time">
+                <h3 class="inp_sec_title">Setect Date and Time</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="date" name="dare" id="dare">
+                    <select class="select" name="inte_dtime" id="inte_dtime">
+                        <option value="">Time</option>
+                    </select>
                 </div>
             </div>
-            <div class="service_card">
-                <img src="./images/moving_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Moving Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
+            <div class="pickup_details multi_pd">
+                <h3 class="inp_sec_title">Pickup Details</h3>
+                <button class="btn_sec" onclick="func_add_pickup()">Add Pickup Location</button>
+            </div>  
+            <div class="dropoff_details">
+                <h3 class="inp_sec_title">Dropoff Details</h3>
+                <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Type Your Address">
+                <div class="full_inp_sec gap_0">
+                    <div class="half_inp">
+                        <input type="text" name="sender_name" id="sender_name" class="page_inp" placeholder="Contact Name">
+                        <input type="email" name="sender_email" id="sender_email" class="page_inp" placeholder="Unit/Suite Number">
                     </div>
-                    <a href="./pages/moving/now.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
+                    <div class="half_inp">
+                        <input type="text" name="receiver_name" id="receiver_name" class="page_inp" placeholder="Contact Number">
+                        <input type="enail" name="receiver_email" id="receiver_email" class="page_inp" placeholder="Address Instruction">
+                    </div>
+                </div>
+                <div class="half_inp">
+                    <select class="select" name="s_tower_build" id="s_tower_build">
+                        <option value="">Is it a tower building</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>           
+            <div class="full_inp_sec users_det">
+                <div class="half_inp driver_tip">
+                    <h3 class="inp_sec_title">Driver Tip</h3>
+                    <input type="number" name="receiver_name" id="receiver_name" class="page_inp" placeholder="Enter a tip amount [ $0 to infinity ]">
                 </div>
             </div>
-            <div class="service_card">
-                <img src="./images/storage_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Storage Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
-                    </div>
-                    <a href="./business_directory.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
-                </div>
-            </div>
+            <button class="page_main_btn" type="submit">Continue</button>
         </div>
-    </section>
+    </div>
+
+    <!-- Popup Page -->
+    <div id="multi_pickup" class="page_popup">
+        <i id="close_popup" class="bi bi-x-lg" onclick="func_remove_pickup()" ></i>
+        <h3 class="popup_title">Multiple Pickup Locations</h3>
+        <button class="btn_pri" style="margin-top: 15px;" onclick="show_add_pickup()" >Add New Pickup</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Contact Name</th>
+                    <th>Pickup Address</th>
+                    <th>Package</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="pickup_details">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <div id="add_multi_pickup" class="page_popup">
+        <i id="close_popup" class="bi bi-x-lg" onclick="func_remove_add_pickup()" ></i>
+        <h3 class="popup_title">Add Pickup Details</h3>
+        <form id="pickup_form" style="margin-top: 15px;">
+            <div class="pickup_details">
+                <h3 class="inp_sec_title">Pickup Details</h3>
+                <input type="text" name="pick_adddress" id="pick_adddress" class="page_inp" placeholder="Type Your Address">
+                <div class="full_inp_sec gap_0">
+                    <div class="half_inp">
+                        <input type="text" name="pick_name" id="pick_name" class="page_inp" placeholder="Contact Name">
+                        <input type="number" name="pick_unit" id="pick_unit" class="page_inp" placeholder="Unit/Suite Number">
+                    </div>
+                    <div class="half_inp">
+                        <input type="number" name="pick_number" id="pick_number" class="page_inp" placeholder="Contact Number">
+                        <input type="text" name="pick_add_ins" id="pick_add_ins" class="page_inp" placeholder="Address Instruction">
+                    </div>
+                </div>
+                <div class="half_inp">
+                    <select class="select" name="pick_tower" id="pick_tower">
+                        <option value="">Is it a tower building</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="pack_info">
+                <div class="ist_sec">
+                    <h3 class="inp_sec_title">Package Information</h3>
+                    <button type="button" id="add_package">
+                        <i class="bi bi-plus-lg"></i>
+                        Add Package
+                    </button>
+                </div>
+                <div id="package_sec">
+                    <div class="package_item full_inp_sec gap_0 " _uid="0">
+                        <select class="select package_type" name="package_type" id="package_type"></select>
+                        <select class="select package_quantity" name="package_quantity" id="package_quantity"></select>
+                    </div>
+                </div>                
+            </div>
+            <div class="half_inp insurance">
+                <h3 class="inp_sec_title">Insurance</h3>
+                <select class="select" name="ins_type" id="ins_type"></select>
+            </div>
+            <button type="submit" class="btn_pri">Submit</button>
+        </form>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -325,22 +380,136 @@
         </div>
     </footer>
 
-    
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".hero_swipwer", {
-            pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-            },
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
+    <script>      
+        
+        
+        let pickup_info = new Array();
+        let pickup_form = document.getElementById('pickup_form');
+        pickup_form.addEventListener('submit', (e) => {
+            if(localStorage.getItem('pickup_info')){
+                let pickup_info = JSON.parse(localStorage.getItem('pickup_info'));
             }
-        });
+
+            e.preventDefault();
+            let _uid = Math.floor(Math.random() * 1000000);
+            let pick_adddress = document.getElementById('pick_adddress').value,
+                pick_name = document.getElementById('pick_name').value,
+                pick_number = document.getElementById('pick_number').value,
+                pick_unit = document.getElementById('pick_unit').value,
+                pick_add_ins = document.getElementById('pick_add_ins').value,
+                pick_tower = document.getElementById('pick_tower').value;
+
+            let ins_type = document.getElementById('ins_type').value;
+            let package_info = [];
+
+            let package_items = document.querySelectorAll('.package_item select');
+            
+            for (let i = 0; i < package_items.length; i += 2) {
+                let type = package_items[i].value;
+                let quan = package_items[i+1].value;
+                let obj = [
+                    type,
+                    quan
+                ]
+                package_info.push(obj);
+            }
+            
+            let pickup_item = new Object({
+                _uid: _uid,
+                name: pick_name,
+                number: pick_number,
+                unit: pick_unit,
+                address: pick_adddress,
+                add_ins: pick_add_ins,
+                tower: pick_tower,
+                package_info: package_info,
+                insurance: ins_type
+            });
+
+            pickup_info.push(pickup_item)
+            str_pickup_info = JSON.stringify(pickup_info);
+            localStorage.setItem('pickup_info', str_pickup_info);
+            
+            pickup_form.reset();
+            func_remove_add_pickup();
+            show_pick_details();
+            
+        })
+
+        function show_pick_details(){
+            let pickup_details = document.getElementById('pickup_details');
+            let data = JSON.parse(localStorage.getItem('pickup_info'));
+            if(data){
+                let data_elm = '';
+                for (let i = 0; i < data.length; i++) {
+                    elm = `
+                        <tr id="${data[i]._uid}">
+                            <td>${data[i].name}</td>
+                            <td>${data[i].address}</td>
+                            <td>
+                                ${
+                                    data[i].package_info
+                                }
+                            </td>
+                            <td>
+                                <i onclick="edit_pick_item(${data[i]._uid})" class="tbl_btn bi bi-pen-fill"></i>
+                                <i onclick="delete_pick_item(${data[i]._uid})" class="tbl_btn bi bi-trash3-fill"></i>
+                            </td>
+                        </tr>
+                    `;
+                    data_elm += elm;                    
+                }
+                pickup_details.innerHTML = data_elm;
+            }
+            
+        }
+
+        function edit_pick_item(_id) {
+            let data = JSON.parse(localStorage.getItem('pickup_info'));
+            let item = data.find(x => x._uid === _id);
+            console.log(item);
+
+            if(item){
+                show_add_pickup();
+                document.getElementById('pick_adddress').value = item.address;
+                document.getElementById('pick_name').value = item.name;
+                document.getElementById('pick_number').value = item.number;
+                document.getElementById('pick_unit').value = item.unit;
+                document.getElementById('pick_add_ins').value = item.add_ins;
+                document.getElementById('pick_tower').value = item.tower;
+                document.getElementById('ins_type').value = item.insurance;
+
+                
+            }
+
+        }
+
+        function delete_pick_item(_id) {
+            let item = document.getElementById(_id);
+            item.remove();
+        }
+        
+        let multi_pickup = document.getElementById('multi_pickup');
+        function func_add_pickup() {
+            multi_pickup.classList.add('show')
+            show_pick_details();
+        }
+        function func_remove_pickup() {
+            multi_pickup.classList.remove('show')
+        }
+        
+        let add_multi_pickup = document.getElementById('add_multi_pickup');
+        function show_add_pickup() {
+            add_multi_pickup.classList.add('show')
+        }
+        function func_remove_add_pickup() {
+            add_multi_pickup.classList.remove('show')
+        }
+
+        
     </script>
+    <script src="js/pages_funcion.js"></script>
     <script src="js/index.js"></script>
+    
 </body>
 </html>

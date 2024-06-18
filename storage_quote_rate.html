@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Zoleni</title>
+    <title>Storage Quote - Zoleni</title>
+    <link rel="stylesheet" href="css/pages_style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-      <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<div>
+<body>
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="top_sidebar flex_align">
@@ -201,74 +200,94 @@
         </div>
     </header>
 
-    <div class="swiper hero_swipwer">
-        <div class="swiper-wrapper">
-            <div class="hero_section swiper-slide">
-                <div class="container hero_content">
-                    <div class="content_sec">
-                        <h1 class="hero_title">TORONO’S TRUSTED <br>DELIVERY PARTNER</h1>
-                        <p class="hero_subtitle">Seamlessly delivering what you need, <br>when you need it.</p>
-                    </div>
-                    <button class="btn_pri">Explore Our Services</button>
-                </div>        
-                <img class="hero_img" src="./images/hero.png" alt="image">
-            </div>
-            <div class="hero_section swiper-slide">
-                <div class="container hero_content">
-                    <div class="content_sec">
-                        <h1 class="hero_title">TORONO’S TRUSTED <br>DELIVERY PARTNER</h1>
-                        <p class="hero_subtitle">Seamlessly delivering what you need, <br>when you need it.</p>
-                    </div>
-                    <button class="btn_pri">Explore Our Services</button>
-                </div>        
-                <img class="hero_img" src="./images/moving_img.png" alt="image">
-            </div>
+    <!-- Title Section-->
+    <div class="container page_title_sec">
+        <div class="slug">
+            <a href="../../index.html" class="slug_item">Home</a>
+            <span class="slug_item">></span>
+            <a href="./storage.html" class="slug_item">Storage Quote</a>
         </div>
-        <div class="swiper-pagination"></div>
+        <h2 class="page_title">STORAGE QUOTE</h2>
     </div>
 
-    <!-- Our Service -->
-    <section class="our_service">
-        <h2 class="section_title">Our Services</h2>
-        <div class="container service_cards">
-            <div class="service_card">
-                <img src="./images/delivery_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Delivery Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
-                    </div>
-                    <a href="./pages/delivery/now.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
+    <!-- Input Section -->
+    <div class="container page_inp_sec">
+        <div class="right_inp_sec">
+            <div class="half_inp">
+                <h3 class="inp_sec_title">Select Storage Type</h3>
+                <select class="select" name="quote_storage_type" id="quote_storage_type" onchange="func_change_stype(this)">
+                    <option value="">Select Storage Type</option>
+                    <option value="vahicle">Vahicle</option>
+                    <option value="unit">Unit</option>
+                    <option value="both">Both</option>                    
+                </select>
+            </div>
+            <div id="qs_vahicle">
+                <div class="ist_sec">
+                    <h3 class="inp_sec_title">Vahicle</h3>
+                    <button id="add_vahicle_box" onclick="add_vahicle()">
+                        <i class="bi bi-plus-lg"></i>
+                        Add More
+                    </button>
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <select class="select vahicle" name="vahicle" id="vahicle"></select>
+                    <select class="select vahicle_number" name="vahicle_number" id="vahicle_number"></select>
                 </div>
             </div>
-            <div class="service_card">
-                <img src="./images/moving_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Moving Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
-                    </div>
-                    <a href="./pages/moving/now.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
+            <div id="qs_unit">
+                <div class="ist_sec">
+                    <h3 class="inp_sec_title">Unit</h3>
+                    <button id="add_vahicle_box" onclick="add_units()">
+                        <i class="bi bi-plus-lg"></i>
+                        Add More
+                    </button>
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <select class="select vahicle" name="vahicle" id="vahicle">
+                        <option value="">Select</option>
+                        <option value="none">None</option>
+                    </select>
+                    <select class="select vahicle_number" name="unit_number" id="unit_number"></select>
                 </div>
             </div>
-            <div class="service_card">
-                <img src="./images/storage_img.png" alt="">
-                <div class="card_content">
-                    <div>
-                        <h3 class="card_title">Storage Service</h3>
-                        <p class="card_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus incidunt assumenda repellat facilis alias, iure quis veniam animi aperiam!</p>
-                    </div>
-                    <a href="./business_directory.html">
-                        <button class="btn_pri">Explore</button>
-                    </a>
+            <div class="duration">
+                <h3 class="inp_sec_title">Duration</h3>
+                <div class="full_inp_sec gap_0">
+                    <select class="select" name="for_what" id="for_what" onchange="func_change_for_what(this)">
+                        <option value="">For Days / Weeks / Months</option>
+                        <option value="days">Days</option>
+                        <option value="weeks">Weeks</option>
+                        <option value="months">Months</option>
+                    </select>
+                    <select class="select w_dura"></select>
                 </div>
             </div>
+            <div class="quote_s_featur">
+                <h3 class="inp_sec_title">Features You Want</h3>
+                <div class="full_inp_sec gap_0" id="qs_feature"></div>
+            </div>
+            <div class="move_in_date">
+                <h3 class="inp_sec_title">Move-in Date</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="date" name="date" id="date">
+                    <select class="select" name="quote_op" id="quote_op"></select>
+                </div>
+            </div>
+            <div class="your_contact">
+                <h3 class="inp_sec_title">Your Contact</h3>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Your Name">
+                    <input type="text" placeholder="Email Address">
+                    <input type="text" placeholder="Contact Number">
+                </div>
+                <div class="full_inp_sec gap_0">
+                    <input type="text" placeholder="Write Note">
+                </div>
+            </div>
+            <button class="page_main_btn" type="submit">Continue</button>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -325,22 +344,187 @@
         </div>
     </footer>
 
-    
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".hero_swipwer", {
-            pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-            },
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
+        // func_change_stype
+        function func_change_stype(item) {
+            let vahicle_box = document.getElementById('qs_vahicle'); 
+            let unit_box = document.getElementById('qs_unit');
+
+            if (item.value == 'vahicle') {
+                vahicle_box.classList.add('show');
+                unit_box.classList.remove('show');
+            }else if (item.value == 'unit') {
+                vahicle_box.classList.remove('show');
+                unit_box.classList.add('show');
+            }else if (item.value == 'both') {
+                vahicle_box.classList.add('show');
+                unit_box.classList.add('show');
+            }else{
+                vahicle_box.classList.remove('show');
+                unit_box.classList.remove('show');
             }
-        });
+        }
+
+        // Vahicle Type
+        let vahicle = document.querySelectorAll('.vahicle');
+        let vahicle_options = `
+            <option value="">Select Vehicle</option>
+            <option value="none">None</option>
+            <option value='199'>10 Feet Truck</option>
+            <option value='200'>14 Feet Truck</option>
+            <option value='203'>Boat - Between 16 and 26 Feet</option>
+            <option value='204'>Boat - Between 26 and 40 Feet</option>
+            <option value='205'>Boat - Between 40 and 65 Feet</option>
+            <option value='202'>Boat - Less than 16 Feet</option>
+            <option value='201'>Over 14 Feet Truck</option>
+            <option value='197'>Small Car</option>
+            <option value='198'>SUV</option>
+        `;
+        
+        vahicle.forEach((item) => {
+            item.innerHTML = vahicle_options;
+        })
+
+        let vahicle_number = document.querySelectorAll('.vahicle_number');
+        let vahicle_number_options = `<option value=''>Select</option>`;
+        for (let i = 1; i < 11; i++) {
+            vahicle_number_options += `<option value='${i}'>${i}</option>`;
+            
+        }
+
+        vahicle_number.forEach((item) => {
+            item.innerHTML = vahicle_number_options;
+        })
+
+        // Add Vahicle
+        function add_vahicle() {
+            let vahicle_box = document.getElementById('qs_vahicle');
+            let option = document.createElement('div');
+            option.classList.add('full_inp_sec', 'gap_0');
+            option.innerHTML = `
+                <select class="select vahicle">${vahicle_options}</select>
+                <select class="select vahicle_number">${vahicle_number_options}</select>
+            `;
+
+            vahicle_box.appendChild(option);
+
+        }
+
+        // Add Unit
+        function add_units() {
+            let unit_box = document.getElementById('qs_unit');
+            let option = document.createElement('div');
+            option.classList.add('full_inp_sec', 'gap_0');
+            option.innerHTML = `
+                <select class="select vahicle" name="vahicle" id="vahicle">
+                    <option value="">Select</option>
+                    <option value="none">None</option>
+                </select>
+                <select class="select vahicle_number" name="unit_number" id="unit_number">${vahicle_number_options}</select>
+            `;
+
+            unit_box.appendChild(option);
+
+        }
+        
+
+        // Duration
+        function func_change_for_what(item) {
+            let w_dura = document.querySelector('.w_dura');
+
+            w_dura.setAttribute('id', `${item.value}`);
+            w_dura.setAttribute('name', `${item.value}`);
+            if(item.value == 'days'){
+                let op = get_days();
+                w_dura.innerHTML = op;
+            }else if(item.value == 'weeks'){
+                let op = get_weeks();
+                w_dura.innerHTML = op;
+            }else if(item.value == 'months'){
+                let op = get_monts();
+                w_dura.innerHTML = op;
+            }
+
+        }
+
+        function get_days(){
+            // Month 
+            let month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            let current_month = new Date().getMonth();
+
+            let m_elm = `<option value="">For How Many Days</option>`
+            for (let i = 1; i <= month_days[current_month]; i++) {
+                m_elm += `<option value="${i}">${i}</option>`;            
+            }
+
+            return m_elm;
+        }
+
+        console.log(get_days());
+
+        function get_weeks() {
+            let m_elm = `<option value="">For How Many Weeks</option>`
+        
+            for (let i = 1; i <= 52; i++) {
+                m_elm += `<option value="${i}">${i}</option>`;            
+            }
+
+            return m_elm;
+        }
+
+        function get_monts() {
+            let m_elm = `<option value="">For How Many Months</option>`
+            
+            for (let i = 1; i <= 12; i++) {
+                m_elm += `<option value="${i}">${i}</option>`;            
+            }
+
+            return m_elm;
+        }
+
+
+        // qs_feature
+        let qs_feature = document.getElementById('qs_feature');
+        let fInnerhtml = '';
+        let featurs = [
+            'Account Management',
+            'Adequate Lighting',
+            'Climate Control',
+            'Drive Up',
+            'Dust and Pest Control',
+            'Heated',
+            'Hour Access',
+            'Locker',
+            'Moving Supplies Available',
+            'Premium Security',
+            'Secure Access',
+            'Vehicle Storage',
+            'Video Surveillances',
+            'Wide Drive Aisles'
+        ]
+
+        featurs.forEach((item, index) => {
+            fInnerhtml += `
+                <div class="qs_item check_inp_field">
+                    <input type="checkbox" name="${item}" id="${index}">
+                    <label for="${index}">${item}</label>
+                </div>
+            `;
+        })
+
+        qs_feature.innerHTML = fInnerhtml;
+
+        // Quote Number
+        let quote_op = document.getElementById('quote_op');
+        let options = `<option value="">How many quotes you want?</option>`;
+
+        for (let i = 1; i < 11; i++) {
+            options += `<option value="${i}">${i}</option>`;            
+        }
+
+        quote_op.innerHTML = options;
     </script>
     <script src="js/index.js"></script>
+    
 </body>
 </html>
