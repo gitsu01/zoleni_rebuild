@@ -129,6 +129,59 @@ textarea{
     object-position: center;
 }
 
+/* About Page */
+.about_sec .top_about{
+    color: var(--dark-primary-color);
+    padding: 70px 100px 270px 100px;
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    background-color: #ffa06069;
+
+}
+.top_about .content_sec{
+    width: 50%;
+}
+.top_about h5{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.top_about h2{
+    font-size: 48px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.about_sec .top_about img{
+    border-radius: 20px;
+    height: 500px;
+    /* max-width: 450px; */
+}
+
+.about_sec .our_story{
+    position: relative;
+    top: -200px;
+    margin: 0 100px;
+    background-color: #fff;
+    padding: 70px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.our_story h2{
+    font-size: 32px;
+    line-height: 35px;
+    width: 300px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.about_sec .our_story p{
+    padding-left: 50px;
+    margin-bottom: 15px;
+}
+
 @media screen and (width <= 500px) {
     .left_inp_sec {
         display: none;
