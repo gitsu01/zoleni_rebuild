@@ -290,14 +290,6 @@ textarea{
 
 
 /* Contact Section */
-.contact_sec{
-    display: flex;
-    gap: 30px;
-}
-
-.contact_sec .left_inp_sec img {
-    width: 600px;
-}
 
 .right_inp_sec p{
     margin-bottom: 15px;
