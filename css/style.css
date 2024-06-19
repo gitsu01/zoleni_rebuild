@@ -37,11 +37,25 @@ body {
     flex-direction: column;
 }
 
-.container {
+header{
     padding: 0 100px;
-    width: 100%;
-    max-width: 2200px;
+}
+
+.container {
+    width: 96%;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.top_footer{
+    padding: 20px 100px;
+}
+.bottom_footer{
+    margin: 0 100px;
+}
+
+.service_cards{
+    margin: 0 100px;
 }
 
 .flex_align{
@@ -568,6 +582,17 @@ footer li{
         padding: 0 15px;
     }
 
+    .top_footer{
+        padding: 10px 15px;
+    }
+    .bottom_footer{
+        margin: 0 15px;
+    }
+    
+    .service_cards{
+        margin: 0 15px;
+    }
+
     .section_title{
         padding-left: 15px;
     }
@@ -660,6 +685,16 @@ footer li{
     .container{
         padding: 0 50px;
     }
+    .top_footer{
+        padding: 10px 50px;
+    }
+    .bottom_footer{
+        margin: 0 50px;
+    }
+    
+    .service_cards{
+        margin: 0 50px;
+    }
     .section_title{
         padding-left: 50px;
     }
@@ -668,6 +703,16 @@ footer li{
 @media (width > 500px) and (width <= 1200px){
     .container{
         padding: 0 50px;
+    }
+    .top_footer{
+        padding: 10px 50px;
+    }
+    .bottom_footer{
+        margin: 0 50px;
+    }
+    
+    .service_cards{
+        margin: 0 50px;
     }
     .section_title{
         padding-left: 50px;
