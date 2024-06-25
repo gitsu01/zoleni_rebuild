@@ -1,0 +1,251 @@
+.business_title_sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 30px;
+}
+.business_title_sec .title_sec{
+    margin-bottom: 0;
+}
+
+
+/* Table */
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+table tr,
+table tr td{
+    border-collapse: collapse;
+}
+table thead tr,
+table tbody tr{
+    display: grid;
+    grid-template-columns: 150px 3fr 1fr 1fr 1fr 120px 1fr 2fr;
+}
+
+/* Accounting Claim Money */
+.claimMoney_table_list thead tr,
+.claimMoney_table_list tbody tr{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 2fr;
+}
+
+/* Accounting Revenue Table */
+.revenue_table_list thead tr,
+.revenue_table_list tbody tr{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 2fr 2fr;
+}
+.revenue_table_list tfoot tr{
+    display: grid;
+    grid-template-columns: 11fr 2fr;
+}
+.revenue_table_list tfoot tr td{
+    font-weight: 600;
+}
+.revenue_table_list tfoot tr td:first-child{
+    justify-content: end;
+    padding-right: 20px;
+}
+/* Vahicle Table Start */
+.vahicle_table_list thead tr,
+.vahicle_table_list tbody tr{
+    display: grid;
+    grid-template-columns: 150px 3fr 1fr 1fr 200px;
+}
+
+/* Concierge Table Start */
+.concierge_list_table thead tr,
+.concierge_list_table tbody tr{
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr 1fr 1fr 300px;
+}
+.concierge_list_table tr td:nth-child(6){
+    padding: 8px;
+    gap: 8px;
+    grid-template-columns: 2fr 1fr;
+}
+.concierge_list_table tr td:nth-child(6) .tbl_sm_btn{
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Concierge Table End */
+
+table tr th{
+    color: whitesmoke;
+    padding: 12px 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: var(--hover-color);
+}
+table tr th,
+table tr td{
+    border: 1px solid #dbdbdb;
+}
+
+
+table tr td img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+table tr td{
+    font-size: 15px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table tr td:first-child,
+table tr td:nth-child(6){
+    padding: 0;
+}
+table tr td:last-child{
+    display: grid;
+}
+table .branch_btn{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--hover-color);
+    border-radius: 0 !important;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+table .branch_btn:hover{
+    background-color: rgb(205, 216, 243);
+}
+
+.status{
+    color: rgb(59, 229, 16);
+}
+
+table .actions{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+}
+.actions button{
+    font-size: 14px;
+    border-radius: 5px !important;
+    padding: 7px 16px;
+    background-color: var(--dark-primary-color);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.actions button.featuredBtn:hover,
+.actions button.applyQuoteBtn:hover{
+    background-color: var(--primary-color);
+}
+.actions button i{
+    color: whitesmoke;
+}
+
+.actions .featuredBtn.active{
+    cursor: default;
+    background-color: rgb(205, 216, 243);
+    color: var(--hover-color);
+}
+.actions .featuredBtn.active:hover{
+    background-color: transparent;
+}
+.actions .featuredBtn.active i{
+    font-size: 16px;
+    color: var(--hover-color);
+    margin-right: 8px;
+}
+
+.actions .applyQuoteBtn{
+    height: auto;
+}
+
+.tbl_sm_btn .editBtn{
+    background-color: var(--hover-color);
+}
+
+
+.tbl_sm_btn .deleteBtn{
+    background-color: rgb(255, 55, 48);
+}
+
+
+/* Shipping Business Page */
+.model{
+    display: none;
+    width: 95%;
+    max-width: 520px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+.model.show{
+    display: block;
+}
+.model_header{
+    display: grid;
+    grid-template-columns: 1fr 35px;
+    align-items: center;
+    gap: 100px;
+    padding: 25px 20px 10px 20px;
+}
+.model_header h5{
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.model_header button{
+    padding: 0;
+    height: 35px;
+    background-color: var(--hover-color);
+}
+.model_header button i{
+    color: #fff;
+}
+.model_content{
+    padding: 20px 20px 30px 20px;
+}
+.model_content input{
+    margin: 12px 0;
+    background-color: #fff;
+}
+
+.model_content .inp_box .input input {
+    display: none;
+    visibility: hidden;
+}
+.model_content .inp_box .input{
+    margin: 10px 0 12px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: none;
+    transition: 0.3s ease;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.model_content .inp_box .input:hover{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+}
+.model_content .inp_box .input label{
+    width: 100%;
+    height: 42px;
+    cursor: pointer;
+    gap: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 15px;
+}
+.model_content .inp_box .input label i{
+    font-size: 22px;
+    color: var(--hover-color);
+
+}

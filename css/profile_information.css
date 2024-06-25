@@ -1,0 +1,112 @@
+input,
+.select,
+textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #ddd;
+    height: 40px;
+    padding: 0 12px;    
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+.form_section{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 200px 1fr;
+}
+.form_section .left_form{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.left_form img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.file_inp_box{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-25%, -50%);
+}
+.file_inp_box label{    
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+.file_inp_box i{
+    color: whitesmoke;
+
+}
+.left_form .file_inp_box input{
+    display: none;
+    visibility: none;
+}
+
+.form_section .right_form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form_section .right_form .input_boxes{
+    display: grid;
+    column-gap: 30px;
+    row-gap: 10px;
+    grid-template-columns: 1fr 1fr
+}
+
+.right_form .input_boxes .inp_box{
+    display: inherit;
+    grid-template-columns: 1fr;
+}
+
+.input_boxes .inp_box label{
+    margin-bottom: 8px;
+}
+.profile_btn_sec{
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+/* CSS for Business Tools */
+.add_storage .form_section img{
+    margin-top: 10px;
+    border-radius: 15px !important;
+}
+.add_storage .form_section .file_inp_box{
+    transform: translate(50%, 25%);
+}
+textarea{
+    resize: vertical;
+    height: 120px;
+    padding: 12px;
+}
+
+.multi_select{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 120px;
+    padding: 5px 0;
+}
+.multi_select option{
+    padding: 7px 10px;
+    margin-bottom: 2px;
+}
+.multi_select option:checked,
+.multi_select option:focus{
+    color: white !important;
+    background-color: var(--primary-color) !important;
+}

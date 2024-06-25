@@ -46,9 +46,22 @@ a{
     align-items: center;
 }
 
+/* Header */
+.dash_menuBox{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+.dash_menuBox i{
+    font-size: 20px;
+}
+
 .dashboard_header{
     height: 60px;
     padding: 0 50px;
+    margin-left: 250px;
     border-bottom: 1px solid #eaeaea;
 }
 
@@ -151,9 +164,76 @@ button{
     font-size: .8em;
 }
 
-/* Sidebar */
+.flex_align{
+    display: flex;
+    align-items: center;
+}
+
 /* Sidebar */
 .sidebar{
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #FFF;
+    transition: all 0.3s ease-in; 
+    overflow-y: auto;
+    padding-bottom: 30px;
+    border-right: 1px solid #eaeaea;
+}
+
+.sidebar.open{
+    left: 0;
+}
+.sidebar .top_sidebar{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5px solid var(--dark-primary-color);
+}
+.top_sidebar img {
+    height: 35px;
+}
+
+.top_sidebar #close_menu {
+    font-size: 22px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sidebar_item{
+    padding-left: 20px;
+    font-size: 16px;
+    gap: 12px;
+}
+.sidebar_item a,
+.sidebar_d_items{
+    cursor: pointer;
+    position: relative;
+    line-height: 55px;
+    gap: 12.5px;
+    border-bottom: 0.5px solid rgba(34, 40, 49, .05); 
+}
+
+.sidebar_item a i,
+.sidebar_d_items i{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: all 0.3ms ease;
+}
+
+.sidebar_item a:hover i,
+.sidebar_d_items:hover i{
+    transform: translateY(-50%) rotate(180deg);
+}
+/* Sidebar */
+.dashboard_sidebar{
     z-index: 99;
     position: fixed;
     top: 0;
@@ -349,6 +429,5 @@ section{
 /* Profile Page */
 .profile img{
     width: 100px;
-    height: 100px;
-    
+    height: 100px;    
 }
